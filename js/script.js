@@ -42,3 +42,5 @@ function slideHero(){
 
 createHeroImages();
 setInterval(slideHero, 1000); // change image every 4 seconds
+
+
