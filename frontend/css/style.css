@@ -11,6 +11,7 @@ header .logo img{height:50px;}
 #hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 #hamburger div{width:25px;height:3px;background:white;border-radius:2px;}
 
+
 /* HAMBURGER SLIDE NAVIGATION */
 #fullNav {
     display: flex; /* desktop default */

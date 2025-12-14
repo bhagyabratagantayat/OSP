@@ -32,6 +32,7 @@ function createHeroImages() {
     });
 }
 
+
 function slideHero(){
     const imgs = heroSlider.querySelectorAll('img');
     imgs.forEach(img => img.classList.remove('active'));
