@@ -71,3 +71,34 @@ function slideHero() {
 
 /* Change image every 4 seconds */
 setInterval(slideHero, 2000);
+
+
+
+/* =====================
+   DARK MODE TOGGLE
+===================== */
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+// Auto detect system preference
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  document.body.classList.add("dark-mode");
+}
+
+// Toggle button click
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Optional: save preference to localStorage
+  if(document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+  }
+});
+
+// Load preference from localStorage
+if(localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+} else if(localStorage.getItem("darkMode") === "disabled") {
+  document.body.classList.remove("dark-mode");
+}
