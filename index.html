@@ -2,27 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- IMPORTANT: Mobile Stability -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <title>OSP - Odisha Service Point</title>
+
+<!-- SEO -->
+<meta name="description" content="OSP - Odisha Service Point provides all digital services like document apply, govt certificates, scholarship, form fill-up & CSC services online 24x7.">
+<meta name="keywords" content="OSP Odisha, Odisha Service Point, CSC Services, Online Cyber Cafe, Govt Services Odisha">
+<meta name="author" content="OSP Odisha">
+
+<!-- PWA / App-like -->
+<meta name="theme-color" content="#0d47a1">
+<link rel="manifest" href="manifest.json">
+
+<!-- iOS App Support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Performance -->
+<link rel="preconnect" href="https://wa.me">
+<link rel="preconnect" href="https://t.me">
+
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <!-- Header/Navbar -->
-<header>
+<header role="banner">
     <div class="logo">
-        <img src="assets/logo.jpg" alt="OSP Logo">
+        <img src="assets/logo.jpg" alt="OSP Logo" loading="lazy">
     </div>
 
     <!-- Mobile main links -->
-    <nav class="mobile-nav">
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
         <a href="#services">Services</a>
         <a href="#apply">Apply Form</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <!-- Desktop full nav + Hamburger -->
-    <nav id="fullNav">
+    <nav id="fullNav" aria-label="Main Navigation">
         <a href="#home">Home</a>
         <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
@@ -30,7 +52,7 @@
     </nav>
 
     <!-- Hamburger for mobile -->
-    <div id="hamburger">
+    <div id="hamburger" aria-label="Menu" role="button">
         <div></div>
         <div></div>
         <div></div>
@@ -40,47 +62,49 @@
 <!-- Home / Hero Section -->
 <section id="home" class="hero">
     <div class="hero-slider">
-        <img src="assets/banner.jpg" class="hero-img active" alt="Hero Image 1">
-        <img src="assets/banner2.jpg" class="hero-img" alt="Hero Image 2">
-        <img src="assets/banner3.jpg" class="hero-img" alt="Hero Image 3">
+        <img src="assets/banner.jpg" class="hero-img active" alt="OSP Digital Services" loading="lazy">
+        <img src="assets/banner2.jpg" class="hero-img" alt="Government Services Online" loading="lazy">
+        <img src="assets/banner3.jpg" class="hero-img" alt="Odisha Service Point" loading="lazy">
     </div>
+
     <div class="hero-content">
         <h1>Your All-in-One Digital Service Point</h1>
         <p>ଆପଣଙ୍କର ସମସ୍ତ ସେବା ପାଇଁ ଏକ ସ୍ଥାନ</p>
-        <!-- <div class="hero-buttons">
-            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn">WhatsApp</a>
-            <a href="https://t.me/YourTelegramID" target="_blank" class="btn telegram">Telegram</a>
-        </div> -->
     </div>
 </section>
 
 <!-- Services Section -->
 <section id="services" class="services">
     <h2>Our Services / ଆମ ସେବା</h2>
+
     <div class="service-list">
-        <div class="service-card" onclick="openWhatsapp('Document Apply')">
-            <img src="assets/IMG-20251201-WA0004.jpg" alt="">
+        <div class="service-card" onclick="openWhatsapp('Document Apply')" role="button">
+            <img src="assets/IMG-20251201-WA0004.jpg" alt="Document Apply" loading="lazy">
             <p>Document Apply / ଡକ୍ୟୁମେଣ୍ଟ ଆବେଦନ</p>
         </div>
-        <div class="service-card" onclick="openWhatsapp('Govt Certificates')">
-            <img src="assets/IMG-20251201-WA0008.jpg" alt="">
+
+        <div class="service-card" onclick="openWhatsapp('Govt Certificates')" role="button">
+            <img src="assets/IMG-20251201-WA0008.jpg" alt="Govt Certificates" loading="lazy">
             <p>Govt Certificates / ସରକାରୀ ସର୍ଟିଫିକେଟ୍</p>
         </div>
-        
-        <div class="service-card" onclick="openWhatsapp('Scholarship Apply')">
-            <img src="assets/IMG-20251201-WA0008.jpg" alt="">
+
+        <div class="service-card" onclick="openWhatsapp('Scholarship Apply')" role="button">
+            <img src="assets/IMG-20251201-WA0008.jpg" alt="Scholarship Apply" loading="lazy">
             <p>Scholarship Apply / ସ୍କଲାରସିପ୍ ଆବେଦନ</p>
         </div>
-        <div class="service-card" onclick="openWhatsapp('Form Fill-up')">
-            <img src="assets/IMG-20251201-WA0008.jpg" alt="">
+
+        <div class="service-card" onclick="openWhatsapp('Form Fill-up')" role="button">
+            <img src="assets/IMG-20251201-WA0008.jpg" alt="Form Fill-up" loading="lazy">
             <p>Form Fill-up / ଫର୍ମ ଭରା</p>
         </div>
-        <div class="service-card" onclick="openWhatsapp('Job Assistance')">
-            <img src="assets/IMG-20251201-WA0008.jpg" alt="">
+
+        <div class="service-card" onclick="openWhatsapp('Job Assistance')" role="button">
+            <img src="assets/IMG-20251201-WA0008.jpg" alt="Job Assistance" loading="lazy">
             <p>Job Assistance / ଚାକିରି ସହାୟତା</p>
         </div>
-        <div class="service-card" onclick="openWhatsapp('CSC Services')">
-            <img src="assets/IMG-20251201-WA0008.jpg" alt="">
+
+        <div class="service-card" onclick="openWhatsapp('CSC Services')" role="button">
+            <img src="assets/IMG-20251201-WA0008.jpg" alt="CSC Services" loading="lazy">
             <p>CSC Services / ସିଏସସି ସେବା</p>
         </div>
     </div>
@@ -89,15 +113,18 @@
 <!-- Pricing Section -->
 <section id="pricing" class="pricing">
     <h2>Pricing / ମୂଲ୍ୟ</h2>
-    <table>
-        <tr><th>Service</th><th>Price (₹)</th></tr>
-        <tr><td>Document Apply</td><td>30</td></tr>
-        <tr><td>Govt Certificates</td><td>50</td></tr>
-        <tr><td>Scholarship Apply</td><td>50-100</td></tr>
-        <tr><td>Form Fill-up</td><td>30-50</td></tr>
-        <tr><td>Job Assistance</td><td>50-100</td></tr>
-        <tr><td>CSC Services</td><td>50</td></tr>
-    </table>
+
+    <div class="table-wrapper">
+        <table>
+            <tr><th>Service</th><th>Price (₹)</th></tr>
+            <tr><td>Document Apply</td><td>30</td></tr>
+            <tr><td>Govt Certificates</td><td>50</td></tr>
+            <tr><td>Scholarship Apply</td><td>50-100</td></tr>
+            <tr><td>Form Fill-up</td><td>30-50</td></tr>
+            <tr><td>Job Assistance</td><td>50-100</td></tr>
+            <tr><td>CSC Services</td><td>50</td></tr>
+        </table>
+    </div>
 </section>
 
 <!-- About Section -->
@@ -109,12 +136,12 @@
 <!-- Contact Section -->
 <section id="contact" class="contact">
     <h2>Contact / ସମ୍ପର୍କ</h2>
-    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn">WhatsApp</a>
+    <a href="https://wa.me/917855091725" target="_blank" class="btn">WhatsApp</a>
     <a href="https://t.me/YourTelegramID" target="_blank" class="btn telegram">Telegram</a>
 </section>
 
 <!-- Floating Buttons -->
-<div class="floating-btns">
+<div class="floating-btns" aria-label="Quick Contact">
     <a href="https://wa.me/917855091725" target="_blank">WhatsApp</a>
     <a href="https://t.me/YourTelegramID" target="_blank" class="telegram">Telegram</a>
 </div>
