@@ -338,6 +338,7 @@ body, header, section, footer, .service-card, table, .floating-btns a {
 /* Toggle Button */
 #darkModeToggle {
     margin-left: 10px;
+    margin-right: 10px;
     background: transparent;
     border: none;
     color: white;
