@@ -93,6 +93,7 @@ function closeFarmerPopup() {
 
 
 
+
 /* =========================
    HERO IMAGE SLIDER
 ========================= */
@@ -120,6 +121,7 @@ function slideHero() {
   currentHero = (currentHero + 1) % imgs.length;
   imgs[currentHero].classList.add("active");
 }
+
 
 /* =========================
    Payment Popup Logic
@@ -169,6 +171,36 @@ darkModeToggle.addEventListener("click", () => {
     localStorage.setItem("darkMode", "disabled");
   }
 });
+// FAQ Accordion
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+    item.classList.toggle("active");
+  });
+});
+// Simple impact number increase animation
+const counts = document.querySelectorAll(".count");
+
+counts.forEach(count => {
+  const target = +count.getAttribute("data-target");
+  let current = 0;
+
+  const speed = target / 100; // smoothness control
+
+  const updateCount = () => {
+    current += speed;
+    if (current < target) {
+      count.innerText = Math.ceil(current);
+      setTimeout(updateCount, 20);
+    } else {
+      count.innerText = target;
+    }
+  };
+
+  updateCount();
+});
+
+
 
 // Load preference from localStorage
 if(localStorage.getItem("darkMode") === "enabled") {

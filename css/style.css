@@ -966,5 +966,158 @@ body.dark-mode .floating-btns .telegram {
     transform: translateX(-100%);
   }
 }
+/* FAQ Section */
+.faq {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #FF7F00;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  background: #fff3e6;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question span {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  padding: 12px 14px;
+  background: #fff;
+  font-size: 14px;
+  color: #444;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+/* About Section */
+.about {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about h2 {
+  color: #FF7F00;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+
+.about-list li {
+  background: #fff3e6;
+  border-left: 4px solid #FF7F00;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.about-list li span {
+  font-size: 13px;
+  color: #666;
+}
+/* =========================
+   NAVBAR PROFESSIONAL HOVER
+========================= */
+
+/* Desktop Nav */
+#fullNav a {
+  position: relative;
+  padding: 6px 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* underline animation */
+#fullNav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+#fullNav a:hover {
+  color: #ffe0b3;
+}
+
+#fullNav a:hover::after {
+  width: 100%;
+}
+
+/* Active section (optional manual class) */
+#fullNav a.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+#fullNav a.active::after {
+  width: 100%;
+}
+
+
+/* =========================
+   MOBILE NAV HOVER
+========================= */
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background c 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
 
 
