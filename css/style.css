@@ -411,7 +411,9 @@ header {
     border: 1px solid #ddd;
     outline: none;
     background: #fafafa;
-    transition: border 0.2s ease, background 0.2s ease;
+    transition: border-color 0.2s ease,
+            background-color 0.2s ease;
+
 }
 
 .apply-form input:focus,
@@ -433,8 +435,11 @@ header {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
 }
+
 
 .apply-form button:hover,
 .tracking-box button:hover {
@@ -597,8 +602,12 @@ footer {
 
 /* Smooth transition for all elements */
 body, header, section, footer, .service-card, table, .floating-btns a {
-    transition: background 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
+
 
 /* Toggle Button */
 #darkModeToggle {
