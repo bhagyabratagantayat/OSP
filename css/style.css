@@ -199,6 +199,271 @@ header {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
+/* =========================
+   Impact Section – Theme Match
+   Black | Orange | White
+========================= */
+
+.impact {
+    padding: 40px 15px;          /* size thoda kam */
+    background: #ffffff;         /* white background */
+    text-align: center;
+}
+
+.impact h2 {
+    font-size: 22px;             /* heading chhota */
+    margin-bottom: 25px;
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Cards Layout */
+.impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px;                   /* gap kam */
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Card Style */
+.impact-card {
+    background: #000000;         /* black card */
+    padding: 18px 12px;          /* card size chhota */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.impact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(255,165,0,0.35);
+}
+
+/* Click / Tap effect */
+.impact-card:active {
+    transform: scale(0.96);
+}
+
+/* Numbers */
+.impact-card h3 {
+    font-size: 26px;             /* number chhota */
+    color: orange;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+/* Text */
+.impact-card p {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* SDG tag */
+.impact-card small {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 3px 8px;
+    font-size: 11px;
+    border-radius: 12px;
+    background: orange;
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+    .impact {
+        padding: 35px 12px;
+    }
+
+    .impact h2 {
+        font-size: 20px;
+    }
+
+    .impact-card h3 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================
+   Apply Form – Theme Match
+   Black | Orange | White
+========================= */
+
+.apply {
+    padding: 40px 15px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.apply h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.apply-form {
+    max-width: 420px;
+    margin: auto;
+    background: #000000;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.apply-form input,
+.apply-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.apply-form button {
+    width: 100%;
+    padding: 10px;
+    background: orange;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apply-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255,165,0,0.5);
+}
+
+.apply-form button:active {
+    transform: scale(0.96);
+}
+
+/* =========================
+   Handcrafted Product UI
+   Black | Orange | White
+========================= */
+
+/* Shared section base */
+.apply,
+.tracking {
+    padding: 55px 18px;
+    background: #f9f9f9;
+}
+
+/* Section heading */
+.apply h2,
+.tracking h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto 18px auto;
+}
+
+/* Card wrapper (NOT centered box look) */
+.apply-form,
+.tracking-box {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    padding: 22px 20px 24px 20px;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+/* Accent strip (Figma feel) */
+.apply-form::before,
+.tracking-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 4px;
+    height: 40px;
+    background: orange;
+    border-radius: 4px;
+}
+
+/* Inputs */
+.apply-form input,
+.apply-form select,
+.tracking-box input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #fafafa;
+    transition: border 0.2s ease, background 0.2s ease;
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.tracking-box input:focus {
+    border-color: orange;
+    background: #ffffff;
+}
+
+/* Button – product style */
+.apply-form button,
+.tracking-box button {
+    width: 100%;
+    padding: 11px;
+    background: #111;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.apply-form button:hover,
+.tracking-box button:hover {
+    background: #000;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    transform: translateY(-1px);
+}
+
+.apply-form button:active,
+.tracking-box button:active {
+    transform: scale(0.97);
+}
+
+/* Status result */
+.status-result {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #111;
+    font-weight: 600;
+}
+
+/* Mobile refinement */
+@media (max-width: 600px) {
+    .apply h2,
+    .tracking h2 {
+        font-size: 18px;
+    }
+}
+
 /* =====================
    PRICING
 ===================== */
@@ -406,3 +671,189 @@ body.dark-mode .floating-btns a {
 body.dark-mode .floating-btns .telegram {
     background: #ff9f40;
 }
+/* =========================
+   Farmer Popup – Product UI
+========================= */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 22px 20px;
+    border-radius: 14px;
+    position: relative;
+    animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.popup-box h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.popup-box p {
+    font-size: 14px;
+    margin-bottom: 14px;
+    color: #555;
+}
+
+.farmer-schemes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.farmer-schemes li {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.farmer-btn {
+    width: 100%;
+    padding: 10px;
+    background: orange;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+/* =========================
+   Payment Popup – Clean UI
+========================= */
+
+.pay-btn{
+    margin-top:12px;
+    padding:10px 14px;
+    background:orange;
+    color:#000;
+    font-weight:700;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Overlay */
+.popup-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+/* Popup Box */
+.popup-box{
+    background:#fff;
+    width:90%;
+    max-width:360px;
+    padding:20px;
+    border-radius:14px;
+    position:relative;
+    animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.9);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:14px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* Payment */
+.payment-box h2{
+    margin-bottom:4px;
+}
+
+.qr-box{
+    margin:15px 0;
+    text-align:center;
+}
+
+.qr-box img{
+    width:180px;
+    border:2px solid #000;
+    border-radius:10px;
+}
+
+.upi-id{
+    background:#000;
+    color:#fff;
+    padding:8px;
+    border-radius:6px;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.confirm-pay{
+    width:100%;
+    padding:10px;
+    background:orange;
+    border:none;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.note{
+    font-size:12px;
+    margin-top:8px;
+    color:#666;
+    text-align:center;
+}
+
+/* Receipt */
+.receipt-box h2{
+    text-align:center;
+}
+
+.receipt-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    margin:6px 0;
+}
+
+.thank-you{
+    text-align:center;
+    margin-top:12px;
+    font-size:13px;
+}
+

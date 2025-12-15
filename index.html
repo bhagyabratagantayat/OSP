@@ -111,8 +111,78 @@
             <img src="assets/IMG-20251201-WA0008.jpg" alt="CSC Services" loading="lazy">
             <p>CSC Services / ସିଏସସି ସେବା</p>
         </div>
+        <div class="service-card" onclick="openFarmerPopup()" role="button">
+    <img src="assets/farmer.jpg" alt="Farmer Support" loading="lazy">
+    <p>Farmer Support / କୃଷକ ସେବା</p>
+</div>
+
     </div>
 </section>
+<!-- Impact / SDG Section -->
+<section id="impact" class="impact">
+    <h2>Our Impact / ଆମ ପ୍ରଭାବ</h2>
+
+    <div class="impact-cards">
+        <div class="impact-card">
+            <h3>1,200+</h3>
+            <p>Citizens Served</p>
+            <small>SDG 1 – No Poverty</small>
+        </div>
+
+        <div class="impact-card">
+            <h3>3,500+</h3>
+            <p>Services Delivered</p>
+            <small>SDG 9 – Digital Infrastructure</small>
+        </div>
+
+        <div class="impact-card">
+            <h3>60%</h3>
+            <p>Time Saved</p>
+            <small>SDG 10 – Reduced Inequality</small>
+        </div>
+
+        <div class="impact-card">
+            <h3>25+</h3>
+            <p>Villages Covered</p>
+            <small>SDG 8 – Decent Work</small>
+        </div>
+    </div>
+</section>
+
+<!-- Apply / Service Request Section -->
+<section id="apply" class="apply">
+    <h2>Apply for Service / ସେବା ପାଇଁ ଆବେଦନ</h2>
+
+    <form class="apply-form" onsubmit="sendWhatsApp(event)">
+        <input type="text" id="name" placeholder="Full Name / ନାମ" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number / ମୋବାଇଲ୍" required>
+        <input type="text" id="village" placeholder="Village / ଗାଁ" required>
+
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option>Document Apply</option>
+            <option>Govt Certificate</option>
+            <option>Scholarship Apply</option>
+            <option>Form Fill-up</option>
+            <option>Job Assistance</option>
+            <option>CSC Services</option>
+        </select>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</section>
+<!-- Request Tracking Section -->
+<section id="tracking" class="tracking">
+    <h2>Track Your Request / ଆବେଦନ ଟ୍ରାକ୍ କରନ୍ତୁ</h2>
+
+    <div class="tracking-box">
+        <input type="text" id="requestId" placeholder="Enter Request ID (e.g. OSP1234)">
+        <button onclick="trackRequest()">Track Status</button>
+
+        <p id="statusResult" class="status-result"></p>
+    </div>
+</section>
+
 
 <!-- Pricing Section -->
 <section id="pricing" class="pricing">
@@ -130,6 +200,65 @@
         </table>
     </div>
 </section>
+<div style="text-align:center; margin: 20px 0;">
+    <button class="pay-btn" onclick="openPaymentPopup()">
+        💳 Pay for Service
+    </button>
+</div>
+
+<!-- Payment Popup -->
+<div id="paymentPopup" class="popup-overlay">
+    <div class="popup-box payment-box">
+        <span class="close-btn" onclick="closePaymentPopup()">&times;</span>
+
+        <h2>💳 Pay for Service</h2>
+        <p>Secure UPI Payment</p>
+
+        <!-- QR IMAGE -->
+        <div class="qr-box">
+            <img src="assets/upi-qr.png" alt="UPI QR">
+        </div>
+
+        <div class="upi-id">
+            UPI ID: <strong>osp@upi</strong>
+        </div>
+
+        <button class="confirm-pay" onclick="showReceipt()">
+            I Have Paid
+        </button>
+
+        <p class="note">
+            Payment after service confirmation
+        </p>
+    </div>
+</div>
+
+<!-- Receipt Popup -->
+<div id="receiptPopup" class="popup-overlay">
+    <div class="popup-box receipt-box">
+        <span class="close-btn" onclick="closeReceiptPopup()">&times;</span>
+
+        <h2>✅ Payment Successful</h2>
+
+        <div class="receipt-row">
+            <span>Service</span><span>OSP Digital Service</span>
+        </div>
+        <div class="receipt-row">
+            <span>Amount</span><span>₹50</span>
+        </div>
+        <div class="receipt-row">
+            <span>Payment Mode</span><span>UPI</span>
+        </div>
+        <div class="receipt-row">
+            <span>Status</span><span>Completed</span>
+        </div>
+
+        <p class="thank-you">
+            Thank you for using <strong>Odisha Service Point</strong>
+        </p>
+    </div>
+</div>
+
 
 <!-- About Section -->
 <section id="about" class="about">
@@ -149,6 +278,28 @@
     <a href="https://wa.me/917855091725" target="_blank">WhatsApp</a>
     <a href="https://t.me/odisha_service_point" target="_blank" class="telegram">Telegram</a>
 </div>
+<!-- Farmer Support Popup -->
+<div id="farmerPopup" class="popup-overlay">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeFarmerPopup()">&times;</span>
+
+        <h2>🌾 Farmer Support Services</h2>
+        <p>Govt Schemes • Insurance • Subsidy Help</p>
+
+        <ul class="farmer-schemes">
+            <li><strong>PMFBY</strong> – Crop Insurance</li>
+            <li><strong>KALIA Yojana</strong> – Odisha Farmer Support</li>
+            <li><strong>PM-KISAN</strong> – ₹6000/year</li>
+            <li><strong>Soil Health Card</strong></li>
+            <li><strong>Seed & Fertilizer Subsidy</strong></li>
+        </ul>
+
+        <button class="farmer-btn" onclick="openWhatsapp('Farmer Scheme Assistance')">
+            Apply / Get Help
+        </button>
+    </div>
+</div>
+
 
 <!-- Footer -->
 <footer>
@@ -158,6 +309,7 @@
 <div id="menuOverlay"></div>
 
 <!-- JS - Mobile-friendly & cache-safe -->
+ 
 <script src="js/script.js?v=1.0.0" defer></script>
 </body>
 </html>

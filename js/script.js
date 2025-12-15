@@ -40,6 +40,58 @@ function openWhatsapp(serviceName) {
     "_blank"
   );
 }
+/* =========================
+   Service Request – WhatsApp
+   Safe Add (No Conflict)
+========================= */
+
+function sendWhatsApp(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const village = document.getElementById("village").value;
+    const service = document.getElementById("service").value;
+
+    const msg =
+        `New Service Request:%0A` +
+        `Name: ${name}%0A` +
+        `Mobile: ${mobile}%0A` +
+        `Village: ${village}%0A` +
+        `Service: ${service}`;
+
+    window.open(`https://wa.me/917855091725?text=${msg}`, "_blank");
+}
+/* =========================
+   Dummy Request Tracking
+   Safe & Conflict-Free
+========================= */
+
+function trackRequest() {
+    const id = document.getElementById("requestId").value;
+    const result = document.getElementById("statusResult");
+
+    if (id === "") {
+        result.innerText = "Please enter Request ID";
+        return;
+    }
+
+    // Dummy logic for demo
+    result.innerText = "Status: In Progress ✅ (Our team is working on it)";
+}
+/* =========================
+   Farmer Popup Control
+========================= */
+
+function openFarmerPopup() {
+    document.getElementById("farmerPopup").style.display = "flex";
+}
+
+function closeFarmerPopup() {
+    document.getElementById("farmerPopup").style.display = "none";
+}
+
+
 
 /* =========================
    HERO IMAGE SLIDER
@@ -68,6 +120,28 @@ function slideHero() {
   currentHero = (currentHero + 1) % imgs.length;
   imgs[currentHero].classList.add("active");
 }
+
+/* =========================
+   Payment Popup Logic
+========================= */
+
+function openPaymentPopup(){
+    document.getElementById("paymentPopup").style.display="flex";
+}
+
+function closePaymentPopup(){
+    document.getElementById("paymentPopup").style.display="none";
+}
+
+function showReceipt(){
+    document.getElementById("paymentPopup").style.display="none";
+    document.getElementById("receiptPopup").style.display="flex";
+}
+
+function closeReceiptPopup(){
+    document.getElementById("receiptPopup").style.display="none";
+}
+
 
 /* Change image every 4 seconds */
 setInterval(slideHero, 2000);
