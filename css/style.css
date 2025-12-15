@@ -856,4 +856,60 @@ body.dark-mode .floating-btns .telegram {
     margin-top:12px;
     font-size:13px;
 }
+/* ================================
+   ODIA TEXT – VISIBILITY + FONT FIX
+   ================================ */
+
+.hero-content p {
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff; /* always white */
+    
+    /* 🔥 readability on ANY image */
+    background: rgba(0, 0, 0, 0.45);
+    padding: 6px 10px;
+    border-radius: 4px;
+
+    display: inline-block;
+    margin-top: 6px;
+
+    /* soft glow */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Mobile fine-tune */
+@media (max-width: 768px) {
+    .hero-content p {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}
+/* ===============================
+   HERO CONTENT – PROFESSIONAL POSITION
+   =============================== */
+
+.hero-content {
+    position: absolute;
+    top: 45%;                 /* 👈 exact professional sweet spot */
+    left: 6%;
+    transform: translateY(-45%);
+    max-width: 640px;
+    z-index: 2;
+}
+
+/* Desktop text spacing */
+.hero-content h1 {
+    margin-bottom: 6px;
+}
+
+/* Mobile refinement */
+@media (max-width: 768px) {
+    .hero-content {
+        top: 42%;
+        left: 5%;
+        transform: translateY(-42%);
+        max-width: 90%;
+    }
+}
 
