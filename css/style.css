@@ -47,7 +47,7 @@ header {
   font-weight: 500;
 }
 
-/* Mobile Nav Links (Top small links) */
+/* Mobile Nav */
 .mobile-nav {
   display: none;
   width: 100%;
@@ -77,11 +77,8 @@ header {
   border-radius: 3px;
 }
 
-/* =====================
-   SLIDE MENU (MOBILE)
-===================== */
+/* Slide Menu (Mobile) */
 @media (max-width: 768px) {
-
   #fullNav {
     flex-direction: column;
     position: fixed;
@@ -107,6 +104,31 @@ header {
   .mobile-nav {
     display: flex;
   }
+}
+
+/* Close Button & Overlay */
+#closeMenu {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+  display: none;
+}
+#menuOverlay.show {
+  display: block;
 }
 
 /* =====================
@@ -155,6 +177,17 @@ header {
   margin-top: 8px;
 }
 
+/* Small screens */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.3em;
+  }
+
+  .hero p {
+    font-size: 0.95em;
+  }
+}
+
 /* =====================
    SERVICES
 ===================== */
@@ -199,269 +232,174 @@ header {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   Impact Section – Theme Match
-   Black | Orange | White
-========================= */
-
+/* =====================
+   IMPACT SECTION
+===================== */
 .impact {
-    padding: 40px 15px;          /* size thoda kam */
-    background: #ffffff;         /* white background */
-    text-align: center;
+  padding: 40px 15px;
+  background: #ffffff;
+  text-align: center;
 }
 
 .impact h2 {
-    font-size: 22px;             /* heading chhota */
-    margin-bottom: 25px;
-    color: #000000;
-    font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #000;
+  font-weight: 700;
 }
 
-/* Cards Layout */
 .impact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 18px;                   /* gap kam */
-    max-width: 900px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Card Style */
 .impact-card {
-    background: #000000;         /* black card */
-    padding: 18px 12px;          /* card size chhota */
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    cursor: pointer;
+  background: #000;
+  padding: 18px 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 }
 
-/* Hover effect */
 .impact-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(255,165,0,0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(255,165,0,0.35);
 }
 
-/* Click / Tap effect */
 .impact-card:active {
-    transform: scale(0.96);
+  transform: scale(0.96);
 }
 
-/* Numbers */
 .impact-card h3 {
-    font-size: 26px;             /* number chhota */
-    color: orange;
-    margin-bottom: 4px;
-    font-weight: 700;
+  font-size: 26px;
+  color: orange;
+  margin-bottom: 4px;
+  font-weight: 700;
 }
 
-/* Text */
 .impact-card p {
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
 }
 
-/* SDG tag */
 .impact-card small {
-    display: inline-block;
-    margin-top: 6px;
-    padding: 3px 8px;
-    font-size: 11px;
-    border-radius: 12px;
-    background: orange;
-    color: #000000;
-    font-weight: 700;
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 12px;
+  background: orange;
+  color: #000;
+  font-weight: 700;
 }
 
-/* Mobile tweak */
 @media (max-width: 600px) {
-    .impact {
-        padding: 35px 12px;
-    }
-
-    .impact h2 {
-        font-size: 20px;
-    }
-
-    .impact-card h3 {
-        font-size: 24px;
-    }
-}
-
-
-/* =========================
-   Apply Form – Theme Match
-   Black | Orange | White
-========================= */
-
-.apply {
-    padding: 40px 15px;
-    background: #ffffff;
-    text-align: center;
-}
-
-.apply h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #000000;
-    font-weight: 700;
-}
-
-.apply-form {
-    max-width: 420px;
-    margin: auto;
-    background: #000000;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.apply-form input,
-.apply-form select {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-}
-
-.apply-form button {
-    width: 100%;
-    padding: 10px;
-    background: orange;
-    color: #000000;
-    font-size: 15px;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.apply-form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255,165,0,0.5);
-}
-
-.apply-form button:active {
-    transform: scale(0.96);
-}
-
-/* =========================
-   Handcrafted Product UI
-   Black | Orange | White
-========================= */
-
-/* Shared section base */
-.apply,
-.tracking {
-    padding: 55px 18px;
-    background: #f9f9f9;
-}
-
-/* Section heading */
-.apply h2,
-.tracking h2 {
+  .impact {
+    padding: 35px 12px;
+  }
+  .impact h2 {
     font-size: 20px;
-    font-weight: 700;
-    color: #111;
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto 18px auto;
+  }
+  .impact-card h3 {
+    font-size: 24px;
+  }
 }
 
-/* Card wrapper (NOT centered box look) */
-.apply-form,
-.tracking-box {
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-    background: #ffffff;
-    padding: 22px 20px 24px 20px;
-    border-radius: 14px;
-    border: 1px solid #eee;
-    position: relative;
+/* =====================
+   APPLY / TRACKING FORMS
+===================== */
+.apply, .tracking {
+  padding: 55px 18px;
+  background: #f9f9f9;
+  text-align: center;
 }
 
-/* Accent strip (Figma feel) */
-.apply-form::before,
-.tracking-box::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 18px;
-    width: 4px;
-    height: 40px;
-    background: orange;
-    border-radius: 4px;
+.apply h2, .tracking h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto 18px auto;
 }
 
-/* Inputs */
-.apply-form input,
-.apply-form select,
-.tracking-box input {
-    width: 100%;
-    padding: 11px 12px;
-    margin-bottom: 14px;
-    font-size: 14px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    outline: none;
-    background: #fafafa;
-    transition: border 0.2s ease, background 0.2s ease;
+.apply-form, .tracking-box {
+  max-width: 420px;
+  margin: auto;
+  background: #fff;
+  padding: 22px 20px 24px 20px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  position: relative;
 }
 
-.apply-form input:focus,
-.apply-form select:focus,
-.tracking-box input:focus {
-    border-color: orange;
-    background: #ffffff;
+.apply-form::before, .tracking-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 4px;
+  height: 40px;
+  background: orange;
+  border-radius: 4px;
 }
 
-/* Button – product style */
-.apply-form button,
-.tracking-box button {
-    width: 100%;
-    padding: 11px;
-    background: #111;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+.apply-form input, .apply-form select, .tracking-box input {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: #fafafa;
+  transition: border 0.2s ease, background 0.2s ease;
 }
 
-.apply-form button:hover,
-.tracking-box button:hover {
-    background: #000;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-    transform: translateY(-1px);
+.apply-form input:focus, .apply-form select:focus, .tracking-box input:focus {
+  border-color: orange;
+  background: #fff;
 }
 
-.apply-form button:active,
-.tracking-box button:active {
-    transform: scale(0.97);
+.apply-form button, .tracking-box button {
+  width: 100%;
+  padding: 11px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-/* Status result */
+.apply-form button:hover, .tracking-box button:hover {
+  background: #000;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  transform: translateY(-1px);
+}
+
+.apply-form button:active, .tracking-box button:active {
+  transform: scale(0.97);
+}
+
 .status-result {
-    margin-top: 14px;
-    font-size: 14px;
-    color: #111;
-    font-weight: 600;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #111;
+  font-weight: 600;
 }
 
-/* Mobile refinement */
 @media (max-width: 600px) {
-    .apply h2,
-    .tracking h2 {
-        font-size: 18px;
-    }
+  .apply h2, .tracking h2 {
+    font-size: 18px;
+  }
 }
 
 /* =====================
@@ -478,8 +416,7 @@ header {
   font-size: 14px;
 }
 
-.pricing th,
-.pricing td {
+.pricing th, .pricing td {
   border: 1px solid #FF7F00;
   padding: 10px;
   text-align: left;
@@ -493,8 +430,7 @@ header {
 /* =====================
    ABOUT / CONTACT
 ===================== */
-.about,
-.contact {
+.about, .contact {
   padding: 30px 15px;
   text-align: center;
 }
@@ -551,309 +487,205 @@ footer {
 }
 
 /* =====================
-   SMALL SCREENS
+   POPUPS (Farmer / Payment / Receipt)
 ===================== */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.3em;
-  }
-
-  .hero p {
-    font-size: 0.95em;
-  }
-}
-
-
-/* CLOSE BUTTON INSIDE HAMBURGER MENU */
-#closeMenu {
-  position: absolute;
-  top: 15px;
-  right: 18px;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-}
-
-/* DARK OVERLAY WHEN MENU OPEN */
-#menuOverlay {
+.popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.4);
-  z-index: 998;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
   display: none;
-}
-#menuOverlay.show {
-  display: block;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
+.popup-box {
+  background: #fff;
+  width: 90%;
+  max-width: 420px;
+  padding: 22px 20px;
+  border-radius: 14px;
+  position: relative;
+  animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.farmer-schemes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.farmer-schemes li {
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.farmer-btn, .pay-btn, .confirm-pay {
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.qr-box {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.qr-box img {
+  width: 180px;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.upi-id {
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.payment-box h2, .receipt-box h2 {
+  margin-bottom: 4px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.thank-you {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+}
 
 /* =====================
    DARK MODE
 ===================== */
-
-/* Smooth transition for all elements */
 body, header, section, footer, .service-card, table, .floating-btns a {
-    transition: background 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
 }
 
-/* Toggle Button */
 #darkModeToggle {
-    margin-left: 10px;
-    margin-right: 10px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
+  margin: 0 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-/* Dark Mode Colors */
 body.dark-mode {
-    background: #121212;
-    color: #e0e0e0;
+  background: #121212;
+  color: #e0e0e0;
 }
 
 body.dark-mode header {
-    background: #1f1f1f;
-    color: #e0e0e0;
+  background: #1f1f1f;
+  color: #e0e0e0;
 }
 
 body.dark-mode #fullNav {
-    background: #1f1f1f;
+  background: #1f1f1f;
 }
 
 body.dark-mode #fullNav a,
 body.dark-mode .mobile-nav a {
-    color: #ffffff;
+  color: #fff;
 }
 
 body.dark-mode .hero h1 {
-    color: #FF9F40;
+  color: #FF9F40;
 }
 
 body.dark-mode .hero p {
-    color: #e0e0e0;
+  color: #e0e0e0;
 }
 
 body.dark-mode .services h2,
 body.dark-mode .pricing th,
 body.dark-mode .service-card {
-    color: #FF9F40;
-    border-color: #FF9F40;
+  color: #FF9F40;
+  border-color: #FF9F40;
 }
 
 body.dark-mode .service-card {
-    background: #1f1f1f;
+  background: #1f1f1f;
 }
 
 body.dark-mode .pricing td,
 body.dark-mode .pricing th {
-    background: #1f1f1f;
-    color: #e0e0e0;
-    border-color: #FF9F40;
+  background: #1f1f1f;
+  color: #e0e0e0;
+  border-color: #FF9F40;
 }
 
 body.dark-mode .about,
 body.dark-mode .contact,
 body.dark-mode footer {
-    background: #1f1f1f;
-    color: #e0e0e0;
+  background: #1f1f1f;
+  color: #e0e0e0;
 }
 
 body.dark-mode .floating-btns a {
-    background: #FF7F00;
+  background: #FF7F00;
 }
 
 body.dark-mode .floating-btns .telegram {
-    background: #ff9f40;
+  background: #ff9f40;
 }
+
+/* =====================
+   HERO IMAGE SLIDER LOOP INTERVAL
+===================== */
+
+
 /* =========================
-   Farmer Popup – Product UI
+   HIDE HAMBURGER & CLOSE ON DESKTOP
 ========================= */
+@media (min-width: 769px) {
+  #hamburger,
+  #closeMenu {
+    display: none !important;
+  }
 
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.popup-box {
-    background: #ffffff;
-    width: 90%;
-    max-width: 420px;
-    padding: 22px 20px;
-    border-radius: 14px;
-    position: relative;
-    animation: popupFade 0.3s ease;
-}
-
-@keyframes popupFade {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.close-btn {
-    position: absolute;
-    right: 14px;
-    top: 10px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.popup-box h2 {
-    font-size: 20px;
-    margin-bottom: 6px;
-}
-
-.popup-box p {
-    font-size: 14px;
-    margin-bottom: 14px;
-    color: #555;
-}
-
-.farmer-schemes {
-    list-style: none;
+  #fullNav {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
     padding: 0;
-    margin-bottom: 16px;
-}
+    gap: 12px;
+    transition: none;
+  }
 
-.farmer-schemes li {
-    font-size: 14px;
-    padding: 6px 0;
-    border-bottom: 1px dashed #ddd;
+  #menuOverlay {
+    display: none !important;
+  }
 }
-
-.farmer-btn {
-    width: 100%;
-    padding: 10px;
-    background: orange;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-}
-/* =========================
-   Payment Popup – Clean UI
-========================= */
-
-.pay-btn{
-    margin-top:12px;
-    padding:10px 14px;
-    background:orange;
-    color:#000;
-    font-weight:700;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-/* Overlay */
-.popup-overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-}
-
-/* Popup Box */
-.popup-box{
-    background:#fff;
-    width:90%;
-    max-width:360px;
-    padding:20px;
-    border-radius:14px;
-    position:relative;
-    animation:pop 0.3s ease;
-}
-
-@keyframes pop{
-    from{transform:scale(0.9);opacity:0}
-    to{transform:scale(1);opacity:1}
-}
-
-.close-btn{
-    position:absolute;
-    top:10px;
-    right:14px;
-    font-size:22px;
-    cursor:pointer;
-}
-
-/* Payment */
-.payment-box h2{
-    margin-bottom:4px;
-}
-
-.qr-box{
-    margin:15px 0;
-    text-align:center;
-}
-
-.qr-box img{
-    width:180px;
-    border:2px solid #000;
-    border-radius:10px;
-}
-
-.upi-id{
-    background:#000;
-    color:#fff;
-    padding:8px;
-    border-radius:6px;
-    font-size:14px;
-    margin-bottom:12px;
-}
-
-.confirm-pay{
-    width:100%;
-    padding:10px;
-    background:orange;
-    border:none;
-    border-radius:8px;
-    font-weight:700;
-    cursor:pointer;
-}
-
-.note{
-    font-size:12px;
-    margin-top:8px;
-    color:#666;
-    text-align:center;
-}
-
-/* Receipt */
-.receipt-box h2{
-    text-align:center;
-}
-
-.receipt-row{
-    display:flex;
-    justify-content:space-between;
-    font-size:14px;
-    margin:6px 0;
-}
-
-.thank-you{
-    text-align:center;
-    margin-top:12px;
-    font-size:13px;
-}
-
