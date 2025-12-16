@@ -9,11 +9,13 @@ const overlay = document.getElementById("menuOverlay");
 hamburger.addEventListener("click", () => {
   fullNav.classList.add("show");
   overlay.classList.add("show");
+  hamburger.style.display = "none"; // Hide hamburger when menu opens
 });
 
 function closeNav() {
   fullNav.classList.remove("show");
   overlay.classList.remove("show");
+  hamburger.style.display = "flex"; // Show hamburger when menu closes
 }
 
 if (closeMenu) {
@@ -33,7 +35,7 @@ document.querySelectorAll("#fullNav a").forEach(link => {
    SERVICE → WHATSAPP
 ========================= */
 function openWhatsapp(serviceName) {
-  const phone = "91XXXXXXXXXX"; // replace with your number
+  const phone = "917855091725"; // replace with your number
   const message = `Hello, I want to use the service: ${serviceName}`;
   window.open(
     `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
@@ -91,9 +93,6 @@ function closeFarmerPopup() {
     document.getElementById("farmerPopup").style.display = "none";
 }
 
-
-
-
 /* =========================
    HERO IMAGE SLIDER
 ========================= */
@@ -122,7 +121,6 @@ function slideHero() {
   imgs[currentHero].classList.add("active");
 }
 
-
 /* =========================
    Payment Popup Logic
 ========================= */
@@ -144,11 +142,8 @@ function closeReceiptPopup(){
     document.getElementById("receiptPopup").style.display="none";
 }
 
-
 /* Change image every 4 seconds */
 setInterval(slideHero, 2000);
-
-
 
 /* =====================
    DARK MODE TOGGLE
@@ -199,8 +194,6 @@ counts.forEach(count => {
 
   updateCount();
 });
-
-
 
 // Load preference from localStorage
 if(localStorage.getItem("darkMode") === "enabled") {
