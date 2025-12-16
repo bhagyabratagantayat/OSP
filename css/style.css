@@ -31,9 +31,22 @@ header {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
+/* Logo Circular + Clickable */
 .logo img {
-  height: 48px;
+    width: 50px;           /* adjust size */
+    height: 50px;          /* keep equal width & height for perfect circle */
+    border-radius: 50%;    /* makes circle */
+    object-fit: cover;     /* crop if image is not square */
+    cursor: pointer;       /* pointer on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Optional: hover effect */
+.logo img:hover {
+    transform: scale(1.1);          /* slight zoom */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
 
 /* Desktop Nav */
 #fullNav {
@@ -1277,3 +1290,5 @@ body.dark-mode .floating-btns .telegram {
     border-radius: 3px;
   }
 }
+
+
