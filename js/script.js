@@ -93,33 +93,53 @@ function closeFarmerPopup() {
     document.getElementById("farmerPopup").style.display = "none";
 }
 
-/* =========================
-   HERO IMAGE SLIDER
-========================= */
-const heroImages = [
-  "assets/hero1.jpg",
-  "assets/hero2.jpg",
-  "assets/hero3.jpg"
-];
 
+/* =========================
+   HERO IMAGE SLIDER (FUTURE-PROOF)
+========================= */
 let currentHero = 0;
 const heroSlider = document.querySelector(".hero-slider");
-
-/* Create hero images only once */
-heroImages.forEach((src, index) => {
-  const img = document.createElement("img");
-  img.src = src;
-  img.classList.add("hero-img");
-  if (index === 0) img.classList.add("active");
-  heroSlider.appendChild(img);
-});
+const heroImages = heroSlider.querySelectorAll(".hero-img"); // Grab all images from HTML
 
 function slideHero() {
-  const imgs = heroSlider.querySelectorAll(".hero-img");
-  imgs.forEach(img => img.classList.remove("active"));
-  currentHero = (currentHero + 1) % imgs.length;
-  imgs[currentHero].classList.add("active");
+  heroImages.forEach(img => img.classList.remove("active"));
+  currentHero = (currentHero + 1) % heroImages.length;
+  heroImages[currentHero].classList.add("active");
 }
+
+/* Change image every 4 seconds */
+setInterval(slideHero, 4000); // 4s delay (can adjust)
+
+
+// /* =========================
+//    HERO IMAGE SLIDER
+// ========================= */
+// const heroImages = [
+//   "assets/IMG-20251201-WA0005.jpg",
+//   "assets/banner1.jpg",
+//   "assets/banner2.jpg",
+//   "assets/banner3.jpg",
+//   "assets/bb3.jpeg"
+// ];
+
+// let currentHero = 0;
+// const heroSlider = document.querySelector(".hero-slider");
+
+// /* Create hero images only once */
+// heroImages.forEach((src, index) => {
+//   const img = document.createElement("img");
+//   img.src = src;
+//   img.classList.add("hero-img");
+//   if (index === 0) img.classList.add("active");
+//   heroSlider.appendChild(img);
+// });
+
+// function slideHero() {
+//   const imgs = heroSlider.querySelectorAll(".hero-img");
+//   imgs.forEach(img => img.classList.remove("active"));
+//   currentHero = (currentHero + 1) % imgs.length;
+//   imgs[currentHero].classList.add("active");
+// }
 
 /* =========================
    Payment Popup Logic
