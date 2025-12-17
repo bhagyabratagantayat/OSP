@@ -1383,133 +1383,181 @@ body.dark-mode .floating-btns .telegram {
 ================================
    AI SCHEME FINDER STYLES
 ================================ */
+/* ================================
+   AI SCHEME FINDER (PRO UI)
+================================ */
 
 .ai-scheme {
-  padding: 40px 15px;
-  background: #f7f9fc;
-  border-top: 2px solid #e0e0e0;
+  padding: 60px 16px;
+  background: linear-gradient(180deg, #f8fbff, #eef3ff);
+  border-top: 3px solid #0d47a1;
 }
 
+/* TITLE */
 .ai-scheme h2 {
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   color: #0d47a1;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
+/* DESCRIPTION (AI INTRO FEEL) */
 .ai-desc {
-  max-width: 800px;
-  margin: 0 auto 25px;
+  max-width: 850px;
+  margin: 0 auto 35px;
   text-align: center;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
 }
 
-/* FORM */
+/* ================= FORM ================= */
 .ai-form {
-  max-width: 500px;
+  max-width: 520px;
   margin: auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
+/* INPUTS */
 .ai-form input,
 .ai-form select {
-  padding: 12px;
-  font-size: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 13px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d7e2;
   font-family: 'Baloo Bhaina 2', cursive;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
+.ai-form input::placeholder {
+  color: #999;
+}
+
+/* FOCUS EFFECT */
 .ai-form input:focus,
 .ai-form select:focus {
   outline: none;
   border-color: #0d47a1;
-  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.1);
+  box-shadow: 0 0 0 3px rgba(13,71,161,0.15);
 }
 
+/* BUTTON (AI ACTION) */
 .ai-form button {
+  margin-top: 8px;
   background: linear-gradient(135deg, #0d47a1, #1976d2);
   color: #fff;
   border: none;
-  padding: 12px;
-  font-size: 15px;
-  border-radius: 30px;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 40px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .ai-form button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(13,71,161,0.35);
 }
 
-/* RESULT AREA */
+/* ================= RESULT AREA ================= */
 .ai-result {
-  max-width: 900px;
-  margin: 30px auto 0;
-  font-size: 14px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  font-size: 15px;
   color: #222;
 }
 
-/* AI CARD */
+/* AI TALK MESSAGE */
+.ai-result > p {
+  background: linear-gradient(135deg, #e3f2fd, #f1f7ff);
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #0d47a1;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* ================= AI CARD ================= */
 .ai-card {
   background: #ffffff;
-  border-radius: 10px;
-  padding: 18px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  border-left: 5px solid #0d47a1;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+  border-left: 6px solid #0d47a1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* CARD HOVER (REAL WEB FEEL) */
+.ai-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* CARD TITLE */
 .ai-card h3 {
   margin: 0 0 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: #0d47a1;
+  font-weight: 700;
 }
 
+/* CARD TEXT */
 .ai-card p {
   margin: 8px 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
 }
 
 .ai-card ul,
 .ai-card ol {
-  margin: 8px 0 8px 20px;
+  margin: 10px 0 10px 22px;
 }
 
 .ai-card li {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
-/* AI SPEAK FEEL */
-.ai-result > p {
-  background: #e3f2fd;
-  padding: 12px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: #0d47a1;
-}
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px) {
 
-/* MOBILE OPTIMIZATION */
-@media (max-width: 600px) {
+  .ai-scheme {
+    padding: 45px 14px;
+  }
+
   .ai-scheme h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .ai-desc {
-    font-size: 14px;
+    font-size: 15px;
+  }
+
+  .ai-form {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .ai-form button {
+    font-size: 15px;
+    padding: 13px;
   }
 
   .ai-card {
-    padding: 15px;
+    padding: 18px;
   }
 
   .ai-card h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
