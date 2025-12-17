@@ -210,23 +210,25 @@
 
         </div>
     </section>
-    <section id="ai-scheme" class="ai-scheme">
-  <h2>🤖 AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
+<!-- AI SCHEME FINDER -->
+
+<section id="ai-scheme" class="ai-scheme">
+  <h2>🤖 AI Government Scheme Assistant / AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
 
   <p class="ai-desc">
-    ନମସ୍କାର 🙏  
-    ମୁଁ OSP ର AI ସହାୟକ ।  
-    ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ,  
-    ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି  
-    ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
+    Hello 🙏 / ନମସ୍କାର 🙏 <br>
+    I am OSP's AI Assistant / ମୁଁ OSP ର AI ସହାୟକ । <br>
+    Please provide some basic details / ଦୟାକରି ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ, <br>
+    I will analyze like a human / ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି <br>
+    and suggest suitable government schemes for you / ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
   </p>
 
   <div class="ai-form">
-    <input type="number" id="aiAge" placeholder="ବୟସ (Age)">
-    <input type="number" id="aiIncome" placeholder="ବାର୍ଷିକ ଆୟ (₹)">
+    <input type="number" id="aiAge" placeholder="Age / ବୟସ">
+    <input type="number" id="aiIncome" placeholder="Annual Income (₹) / ବାର୍ଷିକ ଆୟ (₹)">
 
     <select id="aiCaste">
-      <option value="">ଜାତି ବାଛନ୍ତୁ</option>
+      <option value="">Select Caste / ଜାତି ବାଛନ୍ତୁ</option>
       <option>SC</option>
       <option>ST</option>
       <option>OBC</option>
@@ -235,7 +237,7 @@
     </select>
 
     <select id="aiOccupation">
-      <option value="">ପେଶା ବାଛନ୍ତୁ</option>
+      <option value="">Select Occupation / ପେଶା ବାଛନ୍ତୁ</option>
       <option>Student</option>
       <option>Farmer</option>
       <option>Worker</option>
@@ -243,12 +245,13 @@
     </select>
 
     <button onclick="findMySchemeAI()">
-      🤖 AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
+      🤖 Find Scheme for Me / AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
     </button>
   </div>
 
   <div id="aiResult" class="ai-result"></div>
 </section>
+
 
 <!-- How to Apply Section -->
 
