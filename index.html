@@ -210,6 +210,45 @@
 
         </div>
     </section>
+    <section id="ai-scheme" class="ai-scheme">
+  <h2>🤖 AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
+
+  <p class="ai-desc">
+    ନମସ୍କାର 🙏  
+    ମୁଁ OSP ର AI ସହାୟକ ।  
+    ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ,  
+    ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି  
+    ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
+  </p>
+
+  <div class="ai-form">
+    <input type="number" id="aiAge" placeholder="ବୟସ (Age)">
+    <input type="number" id="aiIncome" placeholder="ବାର୍ଷିକ ଆୟ (₹)">
+
+    <select id="aiCaste">
+      <option value="">ଜାତି ବାଛନ୍ତୁ</option>
+      <option>SC</option>
+      <option>ST</option>
+      <option>OBC</option>
+      <option>General</option>
+    </select>
+
+    <select id="aiOccupation">
+      <option value="">ପେଶା ବାଛନ୍ତୁ</option>
+      <option>Student</option>
+      <option>Farmer</option>
+      <option>Worker</option>
+      <option>Unemployed</option>
+    </select>
+
+    <button onclick="findMySchemeAI()">
+      🤖 AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
+    </button>
+  </div>
+
+  <div id="aiResult" class="ai-result"></div>
+</section>
+
 
     <!-- How to Apply Section -->
 
@@ -564,6 +603,12 @@
     <div id="menuOverlay"></div>
 
     <!-- JS - Mobile-friendly & cache-safe -->
+     <!-- JS - Mobile-friendly & cache-safe -->
+ <script src="js/ai-data.js"></script>
+<script src="js/ai-engine.js"></script>
+<script src="js/ai-ui.js"></script>
+
+<script src="js/script.js?v=1.0.0" defer></script>
 
     <script src="js/script.js?v=1.0.0" defer></script>
 </body>
