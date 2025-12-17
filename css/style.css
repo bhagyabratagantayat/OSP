@@ -1289,19 +1289,23 @@ body.dark-mode .floating-btns .telegram {
     background-color: rgba(255,255,255,0.3);
     border-radius: 3px;
   }
-
+}
   
-}/* How to Apply Section */
+/* How to Apply Section */
 .how-to-apply {
     padding: 60px 20px;
-    background: #003366; /* Dark blue */
-    color: #fff;
+    background: #ffffff; /* white background */
+    color: #333;
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 
+.how-to-apply h2 {
+    color: #e65100; /* orange */
+}
+
 .how-to-apply .subtitle {
-    color: #cbd5e1;
+    color: #666;
     font-size: 16px;
     margin-bottom: 40px;
 }
@@ -1310,28 +1314,29 @@ body.dark-mode .floating-btns .telegram {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .how-to-apply .step {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 12px;
-    flex: 1 1 250px;
-    max-width: 300px;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff7f0;
+    border: 2px solid #ffa64d;
+    padding: 25px;
+    border-radius: 15px;
+    flex: 1 1 280px;
+    max-width: 320px;
+    box-shadow: 0 4px 10px rgba(255,130,0,0.2);
+    transition: 0.3s ease;
 }
 
 .how-to-apply .step:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(255,130,0,0.4);
 }
 
 .how-to-apply .step-icon {
-    background: #e55108;
-    width: 50px;
-    height: 50px;
+    background: #ff7a00;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     margin: 0 auto 15px;
     display: flex;
@@ -1341,36 +1346,41 @@ body.dark-mode .floating-btns .telegram {
 }
 
 .how-to-apply .step-icon span {
+    background: #ffffff;
+    color: #ff7a00;
+    border: 2px solid #ff7a00;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    border-radius: 50%;
     position: absolute;
     top: -10px;
     right: -10px;
-    background: #00aaff;
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
     font-weight: bold;
 }
 
 .how-to-apply .step h3 {
     margin-bottom: 10px;
     font-size: 18px;
+    color: #e65100;
 }
 
-.how-to-apply .step ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.how-to-apply ul {
     text-align: left;
-    color: #cbd5e1;
+    padding-left: 20px;
+    color: #444;
     font-size: 14px;
 }
 
-.how-to-apply .step ul li {
+.how-to-apply ul li {
     margin-bottom: 8px;
+}
+
+/* Odia font styling */
+.odia {
+    font-family: 'Noto Sans Oriya', sans-serif;
+    color: #444;
+    font-size: 90%;
 }
 
 /* Responsive */
@@ -1380,6 +1390,8 @@ body.dark-mode .floating-btns .telegram {
         align-items: center;
     }
 }
+
+/*
 ================================
    AI SCHEME FINDER STYLES
 ================================ */
@@ -1396,10 +1408,16 @@ body.dark-mode .floating-btns .telegram {
 /* TITLE */
 .ai-scheme h2 {
   text-align: center;
+<<<<<<< HEAD
   font-size: 26px;
   color: #0d47a1;
   margin-bottom: 8px;
   font-weight: 700;
+=======
+  font-size: 22px;
+  color: #FF7F00;
+  margin-bottom: 10px;
+>>>>>>> 750a0320128d0c4d52027eea3c389dfde5da12c5
 }
 
 /* DESCRIPTION (AI INTRO FEEL) */

@@ -210,31 +210,34 @@
 
         </div>
     </section>
-    <section id="ai-scheme" class="ai-scheme">
-  <h2>🤖 AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
+<!-- AI SCHEME FINDER -->
+
+<section id="ai-scheme" class="ai-scheme">
+  <h2>🤖 AI Government Scheme Assistant / AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
 
   <p class="ai-desc">
-    ନମସ୍କାର 🙏  
-    ମୁଁ OSP ର AI ସହାୟକ ।  
-    ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ,  
-    ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି  
-    ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
+    Hello 🙏 / ନମସ୍କାର 🙏 <br>
+    I am OSP's AI Assistant / ମୁଁ OSP ର AI ସହାୟକ । <br>
+    Please provide some basic details / ଦୟାକରି ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ, <br>
+    I will analyze like a human / ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି <br>
+    and suggest suitable government schemes for you / ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
   </p>
 
   <div class="ai-form">
-    <input type="number" id="aiAge" placeholder="ବୟସ (Age)">
-    <input type="number" id="aiIncome" placeholder="ବାର୍ଷିକ ଆୟ (₹)">
+    <input type="number" id="aiAge" placeholder="Age / ବୟସ">
+    <input type="number" id="aiIncome" placeholder="Annual Income (₹) / ବାର୍ଷିକ ଆୟ (₹)">
 
     <select id="aiCaste">
-      <option value="">ଜାତି ବାଛନ୍ତୁ</option>
+      <option value="">Select Caste / ଜାତି ବାଛନ୍ତୁ</option>
       <option>SC</option>
       <option>ST</option>
       <option>OBC</option>
+      <option>SEBC</option>
       <option>General</option>
     </select>
 
     <select id="aiOccupation">
-      <option value="">ପେଶା ବାଛନ୍ତୁ</option>
+      <option value="">Select Occupation / ପେଶା ବାଛନ୍ତୁ</option>
       <option>Student</option>
       <option>Farmer</option>
       <option>Worker</option>
@@ -242,7 +245,7 @@
     </select>
 
     <button onclick="findMySchemeAI()">
-      🤖 AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
+      🤖 Find Scheme for Me / AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
     </button>
   </div>
 
@@ -250,26 +253,31 @@
 </section>
 
 
-    <!-- How to Apply Section -->
+<!-- How to Apply Section -->
 
 <section id="how-to-apply" class="how-to-apply">
     <div class="container">
-        <h2>How to Apply Your Documents Online?</h2>
-        <p class="subtitle">OSP - Odisha Service Point: Online Cyber Cafe Services Made Easy</p>
+        <h2>How to Apply Your Documents Online? <br> / <span class="odia">ଅନଲାଇନ୍ ରେ ଆପଣଙ୍କ ଦଳିଲ କିପରି ଆବେଦନ କରିବେ?</span></h2>
+
+        <p class="subtitle">
+            OSP - Odisha Service Point: Online Cyber Cafe Services Made Easy <br>
+            <span class="odia">OSP - ଓଡିଶା ସର୍ଭିସ ପଏଣ୍ଟ: ଅନଲାଇନ୍ ସେବା ସହଜ ହୋଇଗଲା</span>
+        </p>
 
         <div class="steps">
+
             <!-- Step 1 -->
             <div class="step">
                 <div class="step-icon">
                     <span>1</span>
                     <img src="assets/icons/send-documents.png" alt="Send Documents">
                 </div>
-                <h3>Send Your Documents</h3>
+                <h3>Send Your Documents <br> <span class="odia">ଦଳିଲ ପଠାନ୍ତୁ</span></h3>
                 <ul>
-                    <li>Take clear photos or scans of all necessary documents.</li>
-                    <li>Send them via WhatsApp to our official OSP number.</li>
-                    <li>Include the details of the service you need (certificate, form, etc.).</li>
-                    <li>Ensure all documents are complete to avoid delays.</li>
+                    <li>Send clear photos/scans on WhatsApp.</li>
+                    <li>Include service details (certificate/form). </li>
+                    <li><span class="odia">ଦଳିଲ ଖୋଲା ଅବସ୍ଥାରେ WhatsApp ରେ ପଠାନ୍ତୁ।</span></li>
+                    <li><span class="odia">କୁହନ୍ତୁ କୋଣସି ସର୍ଟିଫିକେଟ୍/ଫର୍ମ ଆବଶ୍ୟକ।</span></li>
                 </ul>
             </div>
 
@@ -279,12 +287,12 @@
                     <span>2</span>
                     <img src="assets/icons/osp-team-contact.png" alt="OSP Team Contact">
                 </div>
-                <h3>Our Team Will Contact You</h3>
+                <h3>Our Team Will Contact You <br> <span class="odia">ଆମ ଦଳ ଯୋଗାଯୋଗ କରିବେ</span></h3>
                 <ul>
-                    <li>After receiving your documents, our team verifies the details.</li>
-                    <li>We contact you via WhatsApp or phone to confirm the process.</li>
-                    <li>Any additional details or corrections will be requested.</li>
-                    <li>We provide guidance on the required next steps.</li>
+                    <li>We verify and confirm your request.</li>
+                    <li>Contact via WhatsApp/Phone.</li>
+                    <li><span class="odia">ଦଳିଲ ଯାଞ୍ଚ କରି ସମ୍ପର୍କ କରାଯିବ।</span></li>
+                    <li><span class="odia">WhatsApp / ଫୋନ ଦ୍ୱାରା ଯୋଗାଯୋଗ।</span></li>
                 </ul>
             </div>
 
@@ -294,19 +302,18 @@
                     <span>3</span>
                     <img src="assets/icons/confirmation-payment.png" alt="Confirmation & Payment">
                 </div>
-                <h3>Confirmation & Payment</h3>
+                <h3>Confirmation & Payment <br> <span class="odia">ନିଶ୍ଚିତିକରଣ ଓ ପେମେଣ୍ଟ୍</span></h3>
                 <ul>
-                    <li>Our team confirms that your application is ready to be submitted.</li>
-                    <li>If any payment is required, we will provide details securely.</li>
-                    <li>After confirmation and payment, your document application is completed.</li>
-                    <li>You will receive a notification once your document is successfully processed.</li>
+                    <li>We submit application after confirmation.</li>
+                    <li>Secure payment if required.</li>
+                    <li><span class="odia">ପେମେଣ୍ଟ୍ ପରେ ଆବେଦନ କରାଯିବ।</span></li>
+                    <li><span class="odia">ପ୍ରକ୍ରିୟା ସମ୍ପୂର୍ଣ୍ଣ ହେଲେ ସୂଚନା ମିଳିବ।</span></li>
                 </ul>
             </div>
+
         </div>
     </div>
 </section>
-
-
 
     <!-- Impact / SDG Section -->
     <section id="impact" class="impact">
