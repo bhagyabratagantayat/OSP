@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OSP Admin Auth</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: #f4f6f9;
+    }
+    .auth-box {
+      max-width: 420px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.1);
+    }
+    .nav-tabs>li>a {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+<script>
+// Agar admin already login hai
+if (localStorage.getItem("adminLoggedIn") === "true") {
+  // Direct dashboard open karo
+  window.location.href = "admin-dashboard.html";
+}
+</script>
+
+<div class="auth-box">
+  <h3 class="text-center text-primary">OSP Admin Panel</h3>
+  <hr>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#login">Login</a></li>
+    <li><a data-toggle="tab" href="#signup">Signup</a></li>
+  </ul>
+
+  <div class="tab-content" style="margin-top:20px;">
+
+    <!-- LOGIN -->
+    <div id="login" class="tab-pane fade in active">
+      <div class="form-group">
+        <input type="text" id="loginUser" class="form-control" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <input type="password" id="loginPass" class="form-control" placeholder="Password">
+      </div>
+      <button class="btn btn-primary btn-block" onclick="loginAdmin()">
+        Login
+      </button>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signup" class="tab-pane fade">
+      <div class="form-group">
+        <input type="text" id="signupUser" class="form-control" placeholder="Create Username">
+      </div>
+      <div class="form-group">
+        <input type="password" id="signupPass" class="form-control" placeholder="Create Password">
+      </div>
+      <button class="btn btn-success btn-block" onclick="signupAdmin()">
+        Signup
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- jQuery + Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+/* ===== ADMIN SIGNUP ===== */
+function signupAdmin() {
+  let admins = JSON.parse(localStorage.getItem("osp_admins")) || [];
+
+  const username = document.getElementById("signupUser").value;
+  const password = document.getElementById("signupPass").value;
+
+  if (!username || !password) {
+    alert("All fields required");
+    return;
+  }
+
+  // check duplicate
+  let exists = admins.find(a => a.username === username);
+  if (exists) {
+    alert("Admin already exists");
+    return;
+  }
+
+  admins.push({ username, password });
+  localStorage.setItem("osp_admins", JSON.stringify(admins));
+
+  alert("Signup successful! Please login.");
+  $('.nav-tabs a[href="#login"]').tab('show');
+}
+
+/* ===== ADMIN LOGIN ===== */
+function loginAdmin() {
+  let admins = JSON.parse(localStorage.getItem("osp_admins")) || [];
+
+  const username = document.getElementById("loginUser").value;
+  const password = document.getElementById("loginPass").value;
+
+  let found = admins.find(
+    a => a.username === username && a.password === password
+  );
+
+  if (found) {
+    localStorage.setItem("adminLoggedIn", "true");
+    window.location.href = "admin-dashboard.html";
+  } else {
+    alert("Invalid login details");
+  }
+}
+</script>
+
+</body>
+</html>

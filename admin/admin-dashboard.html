@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OSP Admin Dashboard</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <style>
+    body { background:#f4f6f9; }
+    .status-pending { color:#f0ad4e; font-weight:bold; }
+    .status-eligible { color:#5cb85c; font-weight:bold; }
+    .status-not { color:#d9534f; font-weight:bold; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h3 class="text-primary">
+    OSP Admin Panel
+    <button class="btn btn-danger pull-right" onclick="logout()">
+  Logout
+</button>
+
+  </h3>
+
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="bg-primary">
+      <tr>
+        <th>Request ID</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Village</th>
+        <th>Service</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="data"></tbody>
+  </table>
+</div>
+
+<script src="admin.js"></script>
+
+<script src="../js/admin.js"></script>
+
+
+</body>
+</html>
