@@ -1542,6 +1542,33 @@ body.dark-mode .theme-toggle .moon {
     font-size: 90%;
 }
 
+
+/* Icon container already OK */
+.how-to-apply .step-icon {
+    overflow: hidden; /* 🔥 IMPORTANT: keeps image inside circle */
+}
+
+/* ICON IMAGE PERFECT FIT */
+.how-to-apply .step-icon img {
+    width: 32px;          /* desktop default */
+    height: 32px;
+    object-fit: contain; /* no crop, no stretch */
+    display: block;
+}
+
+/* Slightly smaller icons on mobile */
+@media (max-width: 480px) {
+    .how-to-apply .step-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .how-to-apply .step-icon img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 /* Responsive */
 @media(max-width: 900px){
     .how-to-apply .steps {
@@ -1550,10 +1577,7 @@ body.dark-mode .theme-toggle .moon {
     }
 }
 
-/*
-================================
-   AI SCHEME FINDER STYLES
-================================ */
+
 /* ================================
    AI SCHEME FINDER (PRO UI)
 ================================ */
