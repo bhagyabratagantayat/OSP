@@ -664,8 +664,8 @@ footer {
   border: none;
   font-size: 20px;
   cursor: pointer;
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -696,11 +696,6 @@ body.dark-mode .theme-toggle .sun {
 body.dark-mode .theme-toggle .moon {
   opacity: 1;
   transform: rotate(0) scale(1);
-}
-
-/* Hover */
-.theme-toggle:hover {
-  background: rgba(255,255,255,0.15);
 }
 
 /* =========================
@@ -788,6 +783,73 @@ body.dark-mode .hero h1 {
 body.dark-mode .hero p {
   color: #ffffff;
 }
+
+/* =========================
+   DARK MODE TOGGLE – MOBILE SAFE
+========================= */
+
+.theme-toggle {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  position: relative;
+
+  /* 🔥 MOBILE FIX */
+  -webkit-tap-highlight-color: transparent; /* remove blue highlight */
+  appearance: none;
+}
+
+/* Icons */
+.theme-toggle span {
+  position: absolute;
+  font-size: 20px;
+  transition: transform 0.35s ease, opacity 0.3s ease;
+  background: transparent !important;
+}
+
+/* Light mode */
+.theme-toggle .sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle .moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+/* Dark mode */
+body.dark-mode .theme-toggle .sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+body.dark-mode .theme-toggle .moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ❌ REMOVE hover background on mobile */
+.theme-toggle:hover {
+  background: transparent !important;
+}
+
+/* ❌ REMOVE active background on mobile */
+.theme-toggle:active {
+  background: transparent !important;
+}
+
 
 
 /* =========================
