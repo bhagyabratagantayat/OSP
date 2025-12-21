@@ -168,24 +168,40 @@ setInterval(slideHero, 2000);
 /* =====================
    DARK MODE TOGGLE
 ===================== */
-const darkModeToggle = document.getElementById("darkModeToggle");
 
-// Auto detect system preference
-if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+/* =====================
+   DARK MODE SYSTEM
+===================== */
+
+const toggleBtn = document.getElementById("darkModeToggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Initial load
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-mode");
+} else if (savedTheme === "light") {
+  document.body.classList.remove("dark-mode");
+} else if (prefersDark) {
   document.body.classList.add("dark-mode");
 }
 
-// Toggle button click
-darkModeToggle.addEventListener("click", () => {
+// Toggle manually
+toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
-  // Optional: save preference to localStorage
-  if(document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("darkMode", "enabled");
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
   } else {
-    localStorage.setItem("darkMode", "disabled");
+    localStorage.setItem("theme", "light");
   }
 });
+
+
+
+
+
 // FAQ Accordion
 document.querySelectorAll(".faq-question").forEach(btn => {
   btn.addEventListener("click", () => {

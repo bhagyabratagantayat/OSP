@@ -644,87 +644,152 @@ footer {
 /* =====================
    DARK MODE
 ===================== */
+/* =========================
+   GLOBAL DARK MODE (ALL PAGES)
+========================= */
+/* =========================
+   DARK MODE SYSTEM (GLOBAL)
+========================= */
 
-/* Smooth transition for all elements */
-body, header, section, footer, .service-card, table, .floating-btns a {
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+/* Smooth transition */
+* {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
 }
 
-
-/* Toggle Button */
-#darkModeToggle {
-    margin-left: 10px;
-    margin-right: 10px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
+/* Toggle button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-/* Dark Mode Colors */
+.theme-toggle span {
+  position: absolute;
+  transition: all 0.35s ease;
+}
+
+/* Light mode icons */
+.theme-toggle .sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+.theme-toggle .moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+/* Dark mode icons */
+body.dark-mode .theme-toggle .sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+body.dark-mode .theme-toggle .moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* Hover */
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* =========================
+   DARK MODE COLORS
+========================= */
+
 body.dark-mode {
-    background: #121212;
-    color: #e0e0e0;
+  background: #121212;
+  color: #e0e0e0;
 }
 
+/* Header & Nav */
 body.dark-mode header {
-    background: #1f1f1f;
-    color: #e0e0e0;
+  background: #1f1f1f;
 }
 
-body.dark-mode #fullNav {
-    background: #1f1f1f;
+body.dark-mode nav a {
+  color: #ffffff;
 }
 
-body.dark-mode #fullNav a,
-body.dark-mode .mobile-nav a {
-    color: #ffffff;
+/* Sections */
+body.dark-mode section {
+  background: #121212;
 }
 
-body.dark-mode .hero h1 {
-    color: #FF9F40;
+/* Cards & Boxes */
+body.dark-mode .service-card,
+body.dark-mode .impact-card,
+body.dark-mode .apply-form,
+body.dark-mode .tracking-box,
+body.dark-mode .popup-box,
+body.dark-mode .step,
+body.dark-mode .faq-question,
+body.dark-mode .faq-answer {
+  background: #1f1f1f;
+  color: #ffffff;
+  border-color: #ff9f40;
 }
 
-body.dark-mode .hero p {
-    color: #e0e0e0;
+/* Inputs */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
 }
 
-body.dark-mode .services h2,
-body.dark-mode .pricing th,
-body.dark-mode .service-card {
-    color: #FF9F40;
-    border-color: #FF9F40;
+body.dark-mode input::placeholder {
+  color: #bbbbbb;
 }
 
-body.dark-mode .service-card {
-    background: #1f1f1f;
+/* Tables */
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+  background: #1f1f1f;
+  color: #ffffff;
+  border-color: #ff9f40;
 }
 
-body.dark-mode .pricing td,
-body.dark-mode .pricing th {
-    background: #1f1f1f;
-    color: #e0e0e0;
-    border-color: #FF9F40;
+/* Buttons */
+body.dark-mode button,
+body.dark-mode .btn {
+  background: #ff7f00;
+  color: #000;
 }
 
-body.dark-mode .about,
-body.dark-mode .contact,
+/* Footer */
 body.dark-mode footer {
-    background: #1f1f1f;
-    color: #e0e0e0;
+  background: #1f1f1f;
+  color: #cccccc;
 }
 
+/* Floating buttons */
 body.dark-mode .floating-btns a {
-    background: #FF7F00;
+  background: #ff7f00;
+  color: #000;
 }
 
-body.dark-mode .floating-btns .telegram {
-    background: #ff9f40;
+/* Hero text */
+body.dark-mode .hero h1 {
+  color: #ff9f40;
 }
+body.dark-mode .hero p {
+  color: #ffffff;
+}
+
+
 /* =========================
    Farmer Popup – Product UI
 ========================= */
