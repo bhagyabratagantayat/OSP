@@ -273,3 +273,17 @@ if (counterEl) {
 
   counterEl.innerText = Number(visits).toLocaleString();
 }
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const service = this.service.value;
+  const message = this.message.value;
+
+  const text = `Hello OSP,%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
+
+  window.open(`https://wa.me/917855091725?text=${text}`, "_blank");
+});
