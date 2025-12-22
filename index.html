@@ -37,12 +37,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Fonts (Roboto + Open Sans example) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Oriya:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Oriya:wght@400;700&display=swap"
+        rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto+Condensed:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- ===========================
      BOOTSTRAP CSS
@@ -79,7 +83,7 @@
 =========================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-        <link rel="icon" href="./assets/osp hd logo 3.png">
+    <link rel="icon" href="./assets/osp hd logo 3.png">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -115,10 +119,10 @@
         </nav>
 
         <!-- Hamburger for mobile -->
-<button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-  <span class="sun">☀️</span>
-  <span class="moon">🌙</span>
-</button>
+        <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </button>
 
         <div id="hamburger" aria-label="Menu" role="button">
             <div></div>
@@ -216,202 +220,213 @@
                 <img src="assets/farmer-support.jpg" alt="Farmer Support" loading="lazy">
                 <p>Farmer Support / କୃଷକ ସେବା</p>
             </div>
+            <div class="service-card" onclick="openWhatsapp('Medical Services')" role="button">
+                <img src="assets/medical.jpeg" alt="Medical Services" loading="lazy">
+                <p>Medical Services / ଚିକିତ୍ସା ସେବା</p>
+            </div>
+            <div class="service-card" onclick="openWhatsapp('Subhadra Yojana')" role="button">
+                <img src="assets/subhadra.jpeg" alt="Subhadra Yojana" loading="lazy">
+                <p>Subhadra Yojana / ସୁଭଦ୍ରା ଯୋଜନା</p>
+            </div>
+
+
 
         </div>
     </section>
-<!-- AI SCHEME FINDER -->
+    <!-- AI SCHEME FINDER -->
 
-<section id="ai-scheme" class="ai-scheme">
-  <h2>🤖 AI Government Scheme Assistant / AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
+    <section id="ai-scheme" class="ai-scheme">
+        <h2>🤖 AI Government Scheme Assistant / AI ସରକାରୀ ଯୋଜନା ସହାୟକ</h2>
 
-  <p class="ai-desc">
-    Hello 🙏 / ନମସ୍କାର 🙏 <br>
-    I am OSP's AI Assistant / ମୁଁ OSP ର AI ସହାୟକ । <br>
-    Please provide some basic details / ଦୟାକରି ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ, <br>
-    I will analyze like a human / ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି <br>
-    and suggest suitable government schemes for you / ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
-  </p>
-
-  <div class="ai-form">
-    <input type="number" id="aiAge" placeholder="Age / ବୟସ">
-    <input type="number" id="aiIncome" placeholder="Annual Income (₹) / ବାର୍ଷିକ ଆୟ (₹)">
-
-    <select id="aiCaste">
-      <option value="">Select Caste / ଜାତି ବାଛନ୍ତୁ</option>
-      <option>SC</option>
-      <option>ST</option>
-      <option>OBC</option>
-      <option>SEBC</option>
-      <option>General</option>
-    </select>
-
-    <select id="aiOccupation">
-      <option value="">Select Occupation / ପେଶା ବାଛନ୍ତୁ</option>
-      <option>Student</option>
-      <option>Farmer</option>
-      <option>Worker</option>
-      <option>Unemployed</option>
-    </select>
-
-    <button onclick="findMySchemeAI()">
-      🤖 Find Scheme for Me / AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
-    </button>
-  </div>
-
-  <div id="aiResult" class="ai-result"></div>
-</section>
-
-
-<!-- How to Apply Section -->
-
-<section id="how-to-apply" class="how-to-apply">
-    <div class="container">
-        <h2>How to Apply Your Documents Online? <br> / <span class="odia">ଅନଲାଇନ୍ ରେ ଆପଣଙ୍କ ଦଳିଲ କିପରି ଆବେଦନ କରିବେ?</span></h2>
-
-        <p class="subtitle">
-            OSP - Odisha Service Point: Online Cyber Cafe Services Made Easy <br>
-            <span class="odia">OSP - ଓଡିଶା ସର୍ଭିସ ପଏଣ୍ଟ: ଅନଲାଇନ୍ ସେବା ସହଜ ହୋଇଗଲା</span>
+        <p class="ai-desc">
+            Hello 🙏 / ନମସ୍କାର 🙏 <br>
+            I am OSP's AI Assistant / ମୁଁ OSP ର AI ସହାୟକ । <br>
+            Please provide some basic details / ଦୟାକରି ଆପଣଙ୍କ କିଛି ସାଧାରଣ ତଥ୍ୟ ଦିଅନ୍ତୁ, <br>
+            I will analyze like a human / ମୁଁ ମଣିଷ ଭଳି ଭାବେ ବିଶ୍ଲେଷଣ କରି <br>
+            and suggest suitable government schemes for you / ଆପଣଙ୍କ ପାଇଁ ଯୋଗ୍ୟ ସରକାରୀ ଯୋଜନା କହିଦେବି ।
         </p>
 
-        <div class="steps">
+        <div class="ai-form">
+            <input type="number" id="aiAge" placeholder="Age / ବୟସ">
+            <input type="number" id="aiIncome" placeholder="Annual Income (₹) / ବାର୍ଷିକ ଆୟ (₹)">
 
-            <!-- Step 1 -->
-            <div class="step">
-                <div class="step-icon">
-                    <!-- <span>1</span> -->
-                    <img src="assets/s1111111.png" alt="Send Documents">
-                </div>
-                <h3>Send Your Documents <br> <span class="odia">ଦଳିଲ ପଠାନ୍ତୁ</span></h3>
-                <ul>
-                    <li>Send clear photos/scans on WhatsApp.</li>
-                    <li>Include service details (certificate/form). </li>
-                    <li><span class="odia">ଦଳିଲ ଖୋଲା ଅବସ୍ଥାରେ WhatsApp ରେ ପଠାନ୍ତୁ।</span></li>
-                    <li><span class="odia">କୁହନ୍ତୁ କୋଣସି ସର୍ଟିଫିକେଟ୍/ଫର୍ମ ଆବଶ୍ୟକ।</span></li>
-                </ul>
-            </div>
+            <select id="aiCaste">
+                <option value="">Select Caste / ଜାତି ବାଛନ୍ତୁ</option>
+                <option>SC</option>
+                <option>ST</option>
+                <option>OBC</option>
+                <option>SEBC</option>
+                <option>General</option>
+            </select>
 
-            <!-- Step 2 -->
-            <div class="step">
-                <div class="step-icon">
-                    <!-- <span>2</span> -->
-                    <img src="assets/s222.png" alt="OSP Team Contact">
-                </div>
-                <h3>Our Team Will Contact You <br> <span class="odia">ଆମ ଦଳ ଯୋଗାଯୋଗ କରିବେ</span></h3>
-                <ul>
-                    <li>We verify and confirm your request.</li>
-                    <li>Contact via WhatsApp/Phone.</li>
-                    <li><span class="odia">ଦଳିଲ ଯାଞ୍ଚ କରି ସମ୍ପର୍କ କରାଯିବ।</span></li>
-                    <li><span class="odia">WhatsApp / ଫୋନ ଦ୍ୱାରା ଯୋଗାଯୋଗ।</span></li>
-                </ul>
-            </div>
+            <select id="aiOccupation">
+                <option value="">Select Occupation / ପେଶା ବାଛନ୍ତୁ</option>
+                <option>Student</option>
+                <option>Farmer</option>
+                <option>Worker</option>
+                <option>Unemployed</option>
+            </select>
 
-            <!-- Step 3 -->
-            <div class="step">
-                <div class="step-icon">
-                    <!-- <span>3</span> -->
-                    <img src="assets/s3.png" alt="Confirmation & Payment">
-                </div>
-                <h3>Confirmation & Payment <br> <span class="odia">ନିଶ୍ଚିତିକରଣ ଓ ପେମେଣ୍ଟ୍</span></h3>
-                <ul>
-                    <li>We submit application after confirmation.</li>
-                    <li>Secure payment if required.</li>
-                    <li><span class="odia">ପେମେଣ୍ଟ୍ ପରେ ଆବେଦନ କରାଯିବ।</span></li>
-                    <li><span class="odia">ପ୍ରକ୍ରିୟା ସମ୍ପୂର୍ଣ୍ଣ ହେଲେ ସୂଚନା ମିଳିବ।</span></li>
-                </ul>
-            </div>
-
+            <button onclick="findMySchemeAI()">
+                🤖 Find Scheme for Me / AI ମୋ ପାଇଁ ଯୋଜନା ଖୋଜ
+            </button>
         </div>
-    </div>
-</section>
+
+        <div id="aiResult" class="ai-result"></div>
+    </section>
 
 
-<!-- =========================
+    <!-- How to Apply Section -->
+
+    <section id="how-to-apply" class="how-to-apply">
+        <div class="container">
+            <h2>How to Apply Your Documents Online? <br> / <span class="odia">ଅନଲାଇନ୍ ରେ ଆପଣଙ୍କ ଦଳିଲ କିପରି ଆବେଦନ
+                    କରିବେ?</span></h2>
+
+            <p class="subtitle">
+                OSP - Odisha Service Point: Online Cyber Cafe Services Made Easy <br>
+                <span class="odia">OSP - ଓଡିଶା ସର୍ଭିସ ପଏଣ୍ଟ: ଅନଲାଇନ୍ ସେବା ସହଜ ହୋଇଗଲା</span>
+            </p>
+
+            <div class="steps">
+
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="step-icon">
+                        <!-- <span>1</span> -->
+                        <img src="assets/s1111111.png" alt="Send Documents">
+                    </div>
+                    <h3>Send Your Documents <br> <span class="odia">ଦଳିଲ ପଠାନ୍ତୁ</span></h3>
+                    <ul>
+                        <li>Send clear photos/scans on WhatsApp.</li>
+                        <li>Include service details (certificate/form). </li>
+                        <li><span class="odia">ଦଳିଲ ଖୋଲା ଅବସ୍ଥାରେ WhatsApp ରେ ପଠାନ୍ତୁ।</span></li>
+                        <li><span class="odia">କୁହନ୍ତୁ କୋଣସି ସର୍ଟିଫିକେଟ୍/ଫର୍ମ ଆବଶ୍ୟକ।</span></li>
+                    </ul>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-icon">
+                        <!-- <span>2</span> -->
+                        <img src="assets/s222.png" alt="OSP Team Contact">
+                    </div>
+                    <h3>Our Team Will Contact You <br> <span class="odia">ଆମ ଦଳ ଯୋଗାଯୋଗ କରିବେ</span></h3>
+                    <ul>
+                        <li>We verify and confirm your request.</li>
+                        <li>Contact via WhatsApp/Phone.</li>
+                        <li><span class="odia">ଦଳିଲ ଯାଞ୍ଚ କରି ସମ୍ପର୍କ କରାଯିବ।</span></li>
+                        <li><span class="odia">WhatsApp / ଫୋନ ଦ୍ୱାରା ଯୋଗାଯୋଗ।</span></li>
+                    </ul>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-icon">
+                        <!-- <span>3</span> -->
+                        <img src="assets/s3.png" alt="Confirmation & Payment">
+                    </div>
+                    <h3>Confirmation & Payment <br> <span class="odia">ନିଶ୍ଚିତିକରଣ ଓ ପେମେଣ୍ଟ୍</span></h3>
+                    <ul>
+                        <li>We submit application after confirmation.</li>
+                        <li>Secure payment if required.</li>
+                        <li><span class="odia">ପେମେଣ୍ଟ୍ ପରେ ଆବେଦନ କରାଯିବ।</span></li>
+                        <li><span class="odia">ପ୍ରକ୍ରିୟା ସମ୍ପୂର୍ଣ୍ଣ ହେଲେ ସୂଚନା ମିଳିବ।</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
      FEEDBACK SECTION
 ========================= -->
-<section id="feedback" class="feedback">
-  <div class="container">
+    <section id="feedback" class="feedback">
+        <div class="container">
 
-    <h2>
-      Citizen Feedback <br>
-      <span class="odia">ନାଗରିକ ମତାମତ</span>
-    </h2>
+            <h2>
+                Citizen Feedback <br>
+                <span class="odia">ନାଗରିକ ମତାମତ</span>
+            </h2>
 
-    <p class="feedback-subtitle">
-      Affordable & 24×7 digital services for everyone <br>
-      <span class="odia">ସମସ୍ତଙ୍କ ପାଇଁ କମ୍ ଖର୍ଚ୍ଚରେ 24×7 ଡିଜିଟାଲ୍ ସେବା</span>
-    </p>
+            <p class="feedback-subtitle">
+                Affordable & 24×7 digital services for everyone <br>
+                <span class="odia">ସମସ୍ତଙ୍କ ପାଇଁ କମ୍ ଖର୍ଚ୍ଚରେ 24×7 ଡିଜିଟାଲ୍ ସେବା</span>
+            </p>
 
-    <!-- 🔶 TRUST HIGHLIGHT -->
-    <div class="feedback-highlight">
-      <span>💰 Low-Cost Services</span>
-      <span>⏰ 24×7 Support</span>
-      <span>📱 WhatsApp Based</span>
-      <span>🏡 Rural Friendly</span>
-    </div>
+            <!-- 🔶 TRUST HIGHLIGHT -->
+            <div class="feedback-highlight">
+                <span>💰 Low-Cost Services</span>
+                <span>⏰ 24×7 Support</span>
+                <span>📱 WhatsApp Based</span>
+                <span>🏡 Rural Friendly</span>
+            </div>
 
-    <!-- TEXT FEEDBACK -->
-    <div class="feedback-cards">
+            <!-- TEXT FEEDBACK -->
+            <div class="feedback-cards">
 
-      <div class="feedback-card">
-        <p>
-          “OSP provides services at very low cost.
-          I applied my income certificate without visiting any cyber cafe.
-          Support was available even at night.”
-        </p>
-        <h4>– Ramesh Naik, Odisha</h4>
-      </div>
+                <div class="feedback-card">
+                    <p>
+                        “OSP provides services at very low cost.
+                        I applied my income certificate without visiting any cyber cafe.
+                        Support was available even at night.”
+                    </p>
+                    <h4>– Ramesh Naik, Odisha</h4>
+                </div>
 
-      <div class="feedback-card">
-        <p>
-          “Scholarship application was completed through WhatsApp.
-          Charges were affordable and service was available 24×7.”
-        </p>
-        <h4>– Sunita Das</h4>
-      </div>
+                <div class="feedback-card">
+                    <p>
+                        “Scholarship application was completed through WhatsApp.
+                        Charges were affordable and service was available 24×7.”
+                    </p>
+                    <h4>– Sunita Das</h4>
+                </div>
 
-      <div class="feedback-card">
-        <p>
-          “OSP is very helpful for village people.
-          Low fees, fast response, and full guidance anytime.”
-        </p>
-        <h4>– Bikash Sahoo</h4>
-      </div>
+                <div class="feedback-card">
+                    <p>
+                        “OSP is very helpful for village people.
+                        Low fees, fast response, and full guidance anytime.”
+                    </p>
+                    <h4>– Bikash Sahoo</h4>
+                </div>
 
-    </div>
+            </div>
 
-    <!-- VIDEO FEEDBACK -->
-    <div class="feedback-videos">
+            <!-- VIDEO FEEDBACK -->
+            <div class="feedback-videos">
 
-      <div class="video-box">
-        <video controls preload="metadata" poster="assets/thumbnal 1.jpg.jpeg">
-          <source src="assets/Odisha_Service_Point_Digital_Trust_Video.mp4" type="video/mp4">
-        </video>
-        <p>Low-cost service feedback</p>
-      </div>
+                <div class="video-box">
+                    <video controls preload="metadata" poster="assets/thumbnal 1.jpg.jpeg">
+                        <source src="assets/Odisha_Service_Point_Digital_Trust_Video.mp4" type="video/mp4">
+                    </video>
+                    <p>Low-cost service feedback</p>
+                </div>
 
-      <div class="video-box">
-        <video controls preload="metadata" poster="assets/thumbnal 2.jpeg">
-          <source src="assets/Odia_Video_for_Trust_Building.mp4" type="video/mp4">
-        </video>
-        <p>24×7 WhatsApp support feedback</p>
-      </div>
+                <div class="video-box">
+                    <video controls preload="metadata" poster="assets/thumbnal 2.jpeg">
+                        <source src="assets/Odia_Video_for_Trust_Building.mp4" type="video/mp4">
+                    </video>
+                    <p>24×7 WhatsApp support feedback</p>
+                </div>
 
-      <div class="video-box">
-        <video controls preload="metadata" poster="assets/THUMB 3.jpeg">
-          <source src="assets/SUPPOT.mp4" type="video/mp4">
-        </video>
-        <p>24×7 support feedback</p>
-      </div>
+                <div class="video-box">
+                    <video controls preload="metadata" poster="assets/THUMB 3.jpeg">
+                        <source src="assets/SUPPOT.mp4" type="video/mp4">
+                    </video>
+                    <p>24×7 support feedback</p>
+                </div>
 
-    </div>
+            </div>
 
-    <p class="feedback-note">
-      Feedback shared with user consent. Services are provided at minimal cost
-      and available 24×7 via digital channels.
-    </p>
+            <p class="feedback-note">
+                Feedback shared with user consent. Services are provided at minimal cost
+                and available 24×7 via digital channels.
+            </p>
 
-  </div>
-</section>
+        </div>
+    </section>
 
 
     <!-- Impact / SDG Section -->
@@ -662,50 +677,50 @@
     </section>
 
 
-  <!-- Contact Section -->
-<section id="contact" class="contact-section">
-  <h2>Contact Us</h2>
-  <p class="contact-subtitle">24×7 Online Support for All Digital Services</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p class="contact-subtitle">24×7 Online Support for All Digital Services</p>
 
-  <div class="contact-container">
+        <div class="contact-container">
 
-    <!-- Info -->
-    <div class="contact-info">
-      <h3>Get in Touch</h3>
-      <p><i class="fas fa-phone"></i> +91 78550 91725</p>
-      <p><i class="fas fa-envelope"></i> odishaservicepoint@gmail.com</p>
-      <p><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</p>
-      <p><i class="fas fa-clock"></i> 24×7 Support</p>
+            <!-- Info -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> +91 78550 91725</p>
+                <p><i class="fas fa-envelope"></i> odishaservicepoint@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</p>
+                <p><i class="fas fa-clock"></i> 24×7 Support</p>
 
-      <a href="https://wa.me/919556553566" target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
-    </div>
+                <a href="https://wa.me/919556553566" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
 
-    <!-- Form -->
-    <div class="contact-form">
-      <h3>Send Message</h3>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Mobile Number" required>
-        <input type="email" name="email" placeholder="Email (optional)">
+            <!-- Form -->
+            <div class="contact-form">
+                <h3>Send Message</h3>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Mobile Number" required>
+                    <input type="email" name="email" placeholder="Email (optional)">
 
-        <select name="service" required>
-          <option value="">Select Service</option>
-          <option>Document Apply</option>
-          <option>Govt Certificate</option>
-          <option>Scholarship</option>
-          <option>Form Fill-up</option>
-          <option>Other</option>
-        </select>
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option>Document Apply</option>
+                        <option>Govt Certificate</option>
+                        <option>Scholarship</option>
+                        <option>Form Fill-up</option>
+                        <option>Other</option>
+                    </select>
 
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+                    <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
 
-  </div>
-</section>
+        </div>
+    </section>
 
 
     <!-- Floating Buttons -->
@@ -736,91 +751,91 @@
     </div>
 
 
- <!-- =========================
+    <!-- =========================
         OSP FOOTER
 ========================= -->
-<footer class="osp-footer">
+    <footer class="osp-footer">
 
-  <div class="footer-container">
+        <div class="footer-container">
 
-    <!-- BRAND / LOGO -->
-    <div class="footer-col footer-brand">
-      <img src="assets/osp hd logo 3.png" alt="OSP Logo" class="footer-logo">
+            <!-- BRAND / LOGO -->
+            <div class="footer-col footer-brand">
+                <img src="assets/osp hd logo 3.png" alt="OSP Logo" class="footer-logo">
 
-      <p>
-        <strong>Odisha Service Point (OSP)</strong><br>
-        Low-cost digital services available <strong>24×7</strong> across Odisha.
-        Services provided via WhatsApp & online support.
-      </p>
+                <p>
+                    <strong>Odisha Service Point (OSP)</strong><br>
+                    Low-cost digital services available <strong>24×7</strong> across Odisha.
+                    Services provided via WhatsApp & online support.
+                </p>
 
-      <p class="founder">
-        Founded by <strong>pilu, munu, sahil</strong>
-      </p>
+                <p class="founder">
+                    Founded by <strong>pilu, munu, sahil</strong>
+                </p>
 
-      <!-- SOCIAL MEDIA -->
-      <div class="footer-social">
-        <a href="https://wa.me/919556553566" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://t.me/odisha_service_point" target="_blank" aria-label="Telegram">
-          <i class="fab fa-telegram"></i>
-        </a>
-        <a href="#" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-    </div>
+                <!-- SOCIAL MEDIA -->
+                <div class="footer-social">
+                    <a href="https://wa.me/919556553566" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/odisha_service_point" target="_blank" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
 
-    <!-- IMPORTANT SERVICES -->
-    <div class="footer-col">
-      <h3>Important Services</h3>
-      <ul>
-        <li><a href="#services">Document Apply</a></li>
-        <li><a href="#services">Govt Certificates</a></li>
-        <li><a href="#services">Scholarship Apply</a></li>
-        <li><a href="#services">Form Fill-up</a></li>
-        <li><a href="#services">CSC Services</a></li>
-        <li><a href="#services">Farmer Support</a></li>
-      </ul>
-    </div>
+            <!-- IMPORTANT SERVICES -->
+            <div class="footer-col">
+                <h3>Important Services</h3>
+                <ul>
+                    <li><a href="#services">Document Apply</a></li>
+                    <li><a href="#services">Govt Certificates</a></li>
+                    <li><a href="#services">Scholarship Apply</a></li>
+                    <li><a href="#services">Form Fill-up</a></li>
+                    <li><a href="#services">CSC Services</a></li>
+                    <li><a href="#services">Farmer Support</a></li>
+                </ul>
+            </div>
 
-    <!-- USEFUL LINKS -->
-    <div class="footer-col">
-      <h3>Useful Links</h3>
-      <ul>
-        <li><a href="#about">About OSP</a></li>
-        <li><a href="#how-to-apply">How to Apply</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+            <!-- USEFUL LINKS -->
+            <div class="footer-col">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#about">About OSP</a></li>
+                    <li><a href="#how-to-apply">How to Apply</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
 
-      <p class="visitor-count">
-        👁️ Total Visitors:
-        <span id="visitorCounter">0</span>
-      </p>
-    </div>
+                <p class="visitor-count">
+                    👁️ Total Visitors:
+                    <span id="visitorCounter">0</span>
+                </p>
+            </div>
 
-  </div>
+        </div>
 
-  <div class="footer-bottom">
-    © 2025 <strong>OSP – Odisha Service Point</strong>. All Rights Reserved.
-  </div>
+        <div class="footer-bottom">
+            © 2025 <strong>OSP – Odisha Service Point</strong>. All Rights Reserved.
+        </div>
 
-</footer>
+    </footer>
 
-<!-- Scroll To Top -->
-<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <!-- Scroll To Top -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
-<!-- WhatsApp Floating Button
+    <!-- WhatsApp Floating Button
 <a href="https://wa.me/919556553566"
    class="whatsapp-float"
    target="_blank"
@@ -832,12 +847,12 @@
     <div id="menuOverlay"></div>
 
     <!-- JS - Mobile-friendly & cache-safe -->
-     <!-- JS - Mobile-friendly & cache-safe -->
- <script src="js/ai-data.js"></script>
-<script src="js/ai-engine.js"></script>
-<script src="js/ai-ui.js"></script>
+    <!-- JS - Mobile-friendly & cache-safe -->
+    <script src="js/ai-data.js"></script>
+    <script src="js/ai-engine.js"></script>
+    <script src="js/ai-ui.js"></script>
 
-<script src="js/script.js?v=1.0.0" defer></script>
+    <script src="js/script.js?v=1.0.0" defer></script>
 
     <script src="js/script.js?v=1.0.0" defer></script>
 </body>
