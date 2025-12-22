@@ -1927,3 +1927,187 @@ body.dark-mode .theme-toggle .moon {
     padding: 7px 12px;
   }
 }
+
+
+
+
+
+
+/* =========================
+   OSP FOOTER (RESPONSIVE)
+========================= */
+
+.osp-footer {
+  background: #0f1b2b;
+  color: #ffffff;
+  padding: 50px 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* Logo */
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Headings */
+.footer-col h3 {
+  color: #ff7f00;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Text */
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.founder {
+  margin-top: 8px;
+  color: #ffcc99;
+  font-size: 14px;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #ff7f00;
+}
+
+/* Social Icons */
+.footer-social {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  background: #ff7f00;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: #ffffff;
+}
+
+/* Visitor Counter */
+.visitor-count {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 14px;
+}
+
+/* =========================
+   SCROLL TO TOP
+========================= */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #1f1daf;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  background: #25d366;
+  color: #ffffff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 999;
+}
+
+/* =========================
+   DARK MODE SUPPORT
+========================= */
+body.dark-mode .osp-footer {
+  background: #050b14;
+}
+
+body.dark-mode .footer-col ul li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .footer-social a {
+  background: #ff7f00;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  background: #ff8c00; /* orange */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;git 
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #e67600;
+}
