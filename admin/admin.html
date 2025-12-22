@@ -27,6 +27,35 @@
 </head>
 
 <body>
+  <h3 class="text-primary">
+  <!-- BACK ARROW -->
+  <a href="../index.html" class="btn btn-primary back-btn">
+  <span class="glyphicon glyphicon-arrow-left"><i></i></span>
+</a>
+<style>
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  padding: 8px 0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.back-btn span {
+  font-size: 18px;
+  color: #fff;
+}
+
+.back-btn:hover {
+  background-color: #0d47a1;
+  transform: scale(1.1);
+}
+</style>
 <script>
 // Agar admin already login hai
 if (localStorage.getItem("adminLoggedIn") === "true") {
