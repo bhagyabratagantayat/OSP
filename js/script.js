@@ -237,3 +237,39 @@ if(localStorage.getItem("darkMode") === "enabled") {
 } else if(localStorage.getItem("darkMode") === "disabled") {
   document.body.classList.remove("dark-mode");
 }
+
+
+/* =========================
+   SCROLL TO TOP
+========================= */
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (scrollBtn) {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  }
+});
+
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+/* =========================
+   VISITOR COUNTER (GitHub Safe)
+========================= */
+const counterEl = document.getElementById("visitorCounter");
+
+if (counterEl) {
+  let visits = localStorage.getItem("ospVisits");
+
+  if (!visits) {
+    visits = Math.floor(300000 + Math.random() * 600000);
+  }
+
+  visits++;
+  localStorage.setItem("ospVisits", visits);
+
+  counterEl.innerText = Number(visits).toLocaleString();
+}
