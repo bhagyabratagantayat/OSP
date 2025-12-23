@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OSP Agent Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard">
+
+<header class="dash-header">
+  <h2>OSP Agent Panel</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<section class="agent-info">
+  <h3 id="agentName"></h3>
+  <p>Role: Field Agent</p>
+</section>
+
+<section class="agent-tasks">
+  <h3>Assigned Requests</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Citizen</th>
+        <th>Service</th>
+        <th>Status</th>
+        <th>Checklist</th>
+        <th>Remarks</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="agentTable"></tbody>
+  </table>
+</section>
+
+<script src="js/agent-dashboard.js"></script>
+<button onclick="seedDemoData()">Load Demo Data</button>
+<script src="js/seed-data.js"></script>
+
+</body>
+</html>
