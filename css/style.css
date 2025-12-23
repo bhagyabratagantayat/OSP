@@ -2380,3 +2380,48 @@ body.dark-mode .footer-social a {
 }
 
 
+
+
+/* =========================
+   HERO – MOBILE ONLY (OLD BEHAVIOR RESTORED)
+========================= */
+@media (max-width: 768px) {
+
+  /* Hero container */
+  .hero {
+    position: relative;
+  }
+
+  /* Old mobile height (compact) */
+  .hero-slider {
+    height: 240px;              /* ✅ your original mobile height */
+    min-height: unset;
+    max-height: unset;
+  }
+
+  /* Image behavior */
+  .hero-slider img {
+    height: 240px;
+    object-fit: cover;
+  }
+
+  /* Old text position */
+  .hero-content {
+    position: absolute;
+    top: 42%;
+    left: 5%;
+    transform: translateY(-42%);
+    max-width: 90%;
+    z-index: 2;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+}
