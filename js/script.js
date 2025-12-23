@@ -287,3 +287,9 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
   window.open(`https://wa.me/917855091725?text=${text}`, "_blank");
 });
+
+
+
+
+
+
