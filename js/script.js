@@ -285,7 +285,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
   const text = `Hello OSP,%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
 
-  window.open(`https://wa.me/917855091725?text=${text}`, "_blank");
+  window.open(`https://wa.me/919556553566?text=${text}`, "_blank");
 });
 
 
