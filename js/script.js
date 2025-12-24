@@ -35,7 +35,7 @@ document.querySelectorAll("#fullNav a").forEach(link => {
    SERVICE → WHATSAPP
 ========================= */
 function openWhatsapp(serviceName) {
-  const phone = "917855091725"; // replace with your number
+  const phone = "919556553566"; // replace with your number
   const message = `Hello, I want to use the service: ${serviceName}`;
   window.open(
     `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
@@ -62,7 +62,7 @@ function sendWhatsApp(e) {
         `Village: ${village}%0A` +
         `Service: ${service}`;
 
-    window.open(`https://wa.me/917855091725?text=${msg}`, "_blank");
+    window.open(`https://wa.me/919556553566?text=${msg}`, "_blank");
 }
 /* =========================
    Dummy Request Tracking
